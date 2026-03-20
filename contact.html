@@ -1,0 +1,537 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0a2642",
+              "background-light": "#f6f7f8",
+              "background-dark": "#111921",
+            },
+            fontFamily: {
+              display: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display"
+  >
+    <!-- Top Navigation Bar -->
+    <!-- Sticky Navbar -->
+    <header
+      class="sticky top-0 z-50 w-full bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-primary/10"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <div class="flex items-center gap-2">
+            <div class="bg-primary text-white p-1.5 rounded-lg">
+              <span class="material-symbols-outlined text-2xl"
+                >cleaning_services</span
+              >
+            </div>
+            <h2
+              class="text-primary dark:text-white text-2xl font-black tracking-tight"
+            >
+              CleanPro
+            </h2>
+          </div>
+          <nav class="hidden md:flex items-center gap-8">
+            <a
+              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white font-medium text-sm transition-colors"
+              href="index.html"
+              >Home</a
+            >
+            <a
+              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white font-medium text-sm transition-colors"
+              href="services.html"
+              >Services</a
+            >
+            <a
+              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white font-medium text-sm transition-colors"
+              href="about.html"
+              >About Us</a
+            >
+            <a
+              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white font-medium text-sm transition-colors"
+              href="contact.html"
+              >Contact</a
+            >
+          </nav>
+          <div class="flex items-center gap-4">
+            <button
+              class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide hover:opacity-90 transition-all"
+            >
+              Get Free Quote
+            </button>
+            <button class="md:hidden text-primary dark:text-white">
+              <span class="material-symbols-outlined">menu</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-6 lg:px-20 py-12 lg:py-20">
+      <!-- Hero Title Section -->
+      <div class="mb-16 text-center lg:text-left">
+        <h2
+          class="text-4xl lg:text-5xl font-black text-primary dark:text-white mb-4 tracking-tight"
+        >
+          Connect with Excellence
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl">
+          Tailored cleaning solutions for your home or office. Our premium care
+          team is ready to assist you with a bespoke maintenance plan.
+        </p>
+      </div>
+      <!-- Contact Section Split -->
+      <div class="grid lg:grid-cols-2 gap-16">
+        <!-- Left Side: Professional Form -->
+        <div
+          class="bg-white dark:bg-slate-900 p-8 lg:p-10 rounded-2xl shadow-xl shadow-primary/5 border border-primary/5"
+        >
+          <h3 class="text-2xl font-bold text-primary dark:text-white mb-8">
+            Request a Quote
+          </h3>
+          <form action="#" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="flex flex-col gap-2">
+                <label
+                  class="text-sm font-bold text-primary/80 dark:text-slate-300"
+                  >Full Name</label
+                >
+                <input
+                  class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-4 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                  placeholder="John Doe"
+                  type="text"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label
+                  class="text-sm font-bold text-primary/80 dark:text-slate-300"
+                  >Email Address</label
+                >
+                <input
+                  class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-4 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                  placeholder="john@example.com"
+                  type="email"
+                />
+              </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="flex flex-col gap-2">
+                <label
+                  class="text-sm font-bold text-primary/80 dark:text-slate-300"
+                  >Phone Number</label
+                >
+                <input
+                  class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-4 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                  placeholder="(555) 000-0000"
+                  type="tel"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label
+                  class="text-sm font-bold text-primary/80 dark:text-slate-300"
+                  >Service Type</label
+                >
+                <select
+                  class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-4 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none"
+                >
+                  <option>Residential Deep Clean</option>
+                  <option>Commercial Office Care</option>
+                  <option>Move-in / Move-out</option>
+                  <option>Post-Construction</option>
+                </select>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2">
+              <label
+                class="text-sm font-bold text-primary/80 dark:text-slate-300"
+                >Message</label
+              >
+              <textarea
+                class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-4 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none"
+                placeholder="Tell us about your specific cleaning requirements..."
+                rows="4"
+              ></textarea>
+            </div>
+            <button
+              class="w-full bg-primary text-white font-bold py-4 rounded-lg hover:shadow-xl hover:shadow-primary/30 transition-all flex items-center justify-center gap-2"
+            >
+              <span>Send Message</span>
+              <span class="material-symbols-outlined text-sm">send</span>
+            </button>
+          </form>
+        </div>
+        <!-- Right Side: Contact Info & Map -->
+        <div class="flex flex-col gap-10">
+          <div class="grid sm:grid-cols-2 gap-8">
+            <div class="flex gap-4">
+              <div
+                class="size-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0"
+              >
+                <span class="material-symbols-outlined">call</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-primary dark:text-white">Call Us</h4>
+                <p class="text-slate-600 dark:text-slate-400">
+                  +1 (800) 234-5678
+                </p>
+                <p class="text-xs text-slate-400 mt-1">Mon - Fri, 8am - 6pm</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div
+                class="size-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0"
+              >
+                <span class="material-symbols-outlined">mail</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-primary dark:text-white">Email Us</h4>
+                <p class="text-slate-600 dark:text-slate-400">
+                  concierge@eliteclean.com
+                </p>
+                <p class="text-xs text-slate-400 mt-1">
+                  24hr response guarantee
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div
+                class="size-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0"
+              >
+                <span class="material-symbols-outlined">location_on</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-primary dark:text-white">
+                  Office Address
+                </h4>
+                <p class="text-slate-600 dark:text-slate-400">
+                  1200 Luxury Way, Suite 400<br />Beverly Hills, CA 90210
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div
+                class="size-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0"
+              >
+                <span class="material-symbols-outlined">map</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-primary dark:text-white">
+                  Service Coverage
+                </h4>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Greater LA Area, Orange County, Malibu, and Pasadena.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Styled Map Placeholder -->
+          <div
+            class="relative w-full h-80 rounded-2xl overflow-hidden shadow-inner bg-slate-200 border border-primary/10 group"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 mix-blend-overlay"
+            ></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="text-center">
+                <span
+                  class="material-symbols-outlined text-primary text-5xl mb-2"
+                  >explore</span
+                >
+                <p class="text-primary font-bold">Interactive Service Map</p>
+              </div>
+            </div>
+            <img
+              class="w-full h-full object-cover opacity-40 grayscale group-hover:grayscale-0 transition-all duration-700"
+              data-alt="Modern abstract map view of a city"
+              data-location="Los Angeles"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUK_s11BqfA-iUmtejDvH_n6_ejJpqtDEJ_Bb_p8B4eq-NdFLdCpJiRo_XdvJw3XYSvt7nlO71dygAbPiYbKLmGujU7ESYsPcE4P-1mCk-le8I2bjeSs0bj3wQAhrBcYh9rGbCPIyLRHtKLb0nRtsM_FrfBOGB2o-JpANF4IPFbmMejb5UpASkmm2e6r6Koqg9Mafh8cSbxgCzKsoqSO47QebI3g-Z4jE0LnR75jXalcHYqSVp1GuyATqnuPQQla4mPgppUEVPiIT7"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Service Area Coverage Section -->
+      <section class="mt-24 py-16 border-t border-primary/5">
+        <div class="text-center mb-12">
+          <h3
+            class="text-3xl font-black text-primary dark:text-white mb-2 tracking-tight"
+          >
+            Service Area Coverage
+          </h3>
+          <p class="text-slate-600 dark:text-slate-400">
+            We proudly serve premium neighborhoods across the coast.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div
+            class="bg-primary/5 dark:bg-white/5 p-6 rounded-xl border border-primary/10 text-center"
+          >
+            <span class="text-primary dark:text-slate-300 font-bold"
+              >Beverly Hills</span
+            >
+          </div>
+          <div
+            class="bg-primary/5 dark:bg-white/5 p-6 rounded-xl border border-primary/10 text-center"
+          >
+            <span class="text-primary dark:text-slate-300 font-bold"
+              >Santa Monica</span
+            >
+          </div>
+          <div
+            class="bg-primary/5 dark:bg-white/5 p-6 rounded-xl border border-primary/10 text-center"
+          >
+            <span class="text-primary dark:text-slate-300 font-bold"
+              >Newport Beach</span
+            >
+          </div>
+          <div
+            class="bg-primary/5 dark:bg-white/5 p-6 rounded-xl border border-primary/10 text-center"
+          >
+            <span class="text-primary dark:text-slate-300 font-bold"
+              >Laguna Niguel</span
+            >
+          </div>
+        </div>
+      </section>
+      <!-- FAQ Accordion Section -->
+      <section class="mt-24 mb-12">
+        <div class="max-w-3xl mx-auto">
+          <h3
+            class="text-3xl font-black text-primary dark:text-white mb-8 text-center tracking-tight"
+          >
+            Frequently Asked Questions
+          </h3>
+          <div class="space-y-4">
+            <div
+              class="border border-primary/10 rounded-xl overflow-hidden bg-white dark:bg-slate-900 shadow-sm"
+            >
+              <button
+                class="w-full flex items-center justify-between p-6 text-left hover:bg-primary/5 transition-colors"
+              >
+                <span class="font-bold text-primary dark:text-white"
+                  >Are your cleaning professionals insured and bonded?</span
+                >
+                <span class="material-symbols-outlined text-primary"
+                  >expand_more</span
+                >
+              </button>
+              <div class="px-6 pb-6 text-slate-600 dark:text-slate-400">
+                Yes, 100%. Every EliteClean specialist is fully insured, bonded,
+                and undergoes a rigorous background check to ensure absolute
+                peace of mind for our clients.
+              </div>
+            </div>
+            <div
+              class="border border-primary/10 rounded-xl overflow-hidden bg-white dark:bg-slate-900 shadow-sm"
+            >
+              <button
+                class="w-full flex items-center justify-between p-6 text-left hover:bg-primary/5 transition-colors"
+              >
+                <span class="font-bold text-primary dark:text-white"
+                  >What cleaning products do you use?</span
+                >
+                <span class="material-symbols-outlined text-primary"
+                  >expand_more</span
+                >
+              </button>
+              <div class="px-6 pb-6 text-slate-600 dark:text-slate-400 hidden">
+                We exclusively use hospital-grade, eco-friendly, and non-toxic
+                cleaning agents that are safe for pets and children while
+                remaining effective against pathogens.
+              </div>
+            </div>
+            <div
+              class="border border-primary/10 rounded-xl overflow-hidden bg-white dark:bg-slate-900 shadow-sm"
+            >
+              <button
+                class="w-full flex items-center justify-between p-6 text-left hover:bg-primary/5 transition-colors"
+              >
+                <span class="font-bold text-primary dark:text-white"
+                  >Can I schedule a recurring service?</span
+                >
+                <span class="material-symbols-outlined text-primary"
+                  >expand_more</span
+                >
+              </button>
+              <div class="px-6 pb-6 text-slate-600 dark:text-slate-400 hidden">
+                Absolutely. We offer weekly, bi-weekly, and monthly maintenance
+                plans tailored to your specific schedule and requirements.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-slate-900 text-slate-400 pt-20 pb-10 border-t border-white/5"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+          <div class="col-span-1 md:col-span-1">
+            <div class="flex items-center gap-2 mb-6">
+              <div class="bg-primary text-white p-1.5 rounded-lg">
+                <span class="material-symbols-outlined text-2xl"
+                  >cleaning_services</span
+                >
+              </div>
+              <h2 class="text-white text-2xl font-black tracking-tight">
+                CleanPro
+              </h2>
+            </div>
+            <p class="text-sm leading-relaxed mb-8">
+              The leading choice for premium commercial and residential cleaning
+              services since 2008.
+            </p>
+            <div class="flex gap-4">
+              <a
+                class="size-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-sm">public</span>
+              </a>
+              <a
+                class="size-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >alternate_email</span
+                >
+              </a>
+              <a
+                class="size-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-sm">call</span>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-6">Quick Links</h4>
+            <ul class="space-y-4 text-sm">
+              <li>
+                <a
+                  class="hover:text-primary transition-colors"
+                  href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-primary transition-colors"
+                  href="services.html"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-primary transition-colors"
+                  href="about.html"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-primary transition-colors"
+                  href="contact.html"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-6">Company</h4>
+            <ul class="space-y-4 text-sm">
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Our Process</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Sustainability</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-6">Contact Us</h4>
+            <ul class="space-y-4 text-sm">
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary"
+                  >location_on</span
+                >
+                <span>123 Clean Way, Suite 500<br />Metropolis, NY 10001</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary">call</span>
+                <span>(800) 555-0123</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary">mail</span>
+                <span>hello@cleanpro.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
