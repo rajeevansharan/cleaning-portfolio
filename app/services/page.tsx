@@ -2,8 +2,25 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 },
+  },
+};
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};
 
 const ServicesPage = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -106,35 +123,77 @@ const ServicesPage = () => {
         {/* Page Hero */}
         <section className="relative h-[calc(100vh-4rem)] md:h-[calc(100vh-5rem)] w-full flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 bg-slate-900/60 z-10" />
-          <Image
-            src="/assets/Images/corporate office.png"
-            alt="Corporate Office Background"
-            fill
-            priority
-            className="absolute inset-0 object-cover"
-          />
-          <div className="relative z-20 text-center px-4">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-3 sm:mb-4 tracking-tight">
+          <motion.div
+            className="absolute inset-0"
+            initial={{ scale: 1.1, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1.2, ease: 'easeOut' }}
+          >
+            <Image
+              src="/assets/Images/corporate office.png"
+              alt="Corporate Office Background"
+              fill
+              priority
+              className="absolute inset-0 object-cover"
+            />
+          </motion.div>
+          <motion.div 
+            className="relative z-20 text-center px-4"
+            variants={staggerContainer}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.h2 
+              variants={fadeInUp}
+              transition={{ duration: 0.6 }}
+              className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-3 sm:mb-4 tracking-tight"
+            >
               Our Premium Services
-            </h2>
-            <p className="text-base sm:text-lg text-slate-200 max-w-2xl mx-auto">
+            </motion.h2>
+            <motion.p 
+              variants={fadeInUp}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-base sm:text-lg text-slate-200 max-w-2xl mx-auto"
+            >
               Meticulous cleaning solutions tailored for high-end corporate environments and luxury
               residences.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
         </section>
 
         {/* Commercial Section */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-14 lg:py-16">
-          <div className="flex items-center gap-3 sm:gap-4 mb-8 sm:mb-12 border-b border-slate-200 dark:border-slate-800 pb-4">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-14 lg:py-16 overflow-hidden">
+          <motion.div 
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.5 }}
+            className="flex items-center gap-3 sm:gap-4 mb-8 sm:mb-12 border-b border-slate-200 dark:border-slate-800 pb-4"
+          >
             <span className="material-symbols-outlined text-primary text-2xl sm:text-3xl">corporate_fare</span>
             <h3 className="text-2xl sm:text-3xl font-bold">Commercial Cleaning</h3>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          </motion.div>
+          
+          <motion.div 
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            variants={staggerContainer}
+          >
             {commercialServices.map((service, i) => (
-              <div
+              <motion.div
                 key={i}
-                className="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all"
+                variants={fadeInUp}
+                transition={{ duration: 0.5 }}
+                whileHover={{
+                  y: -6,
+                  boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05)",
+                  borderColor: "rgba(10, 38, 66, 0.2)",
+                }}
+                whileTap={{ scale: 0.98 }}
+                className="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 transition-all duration-300 cursor-pointer"
               >
                 <div className="relative h-48 sm:h-56 w-full overflow-hidden">
                   <Image
@@ -158,22 +217,45 @@ const ServicesPage = () => {
                     ))}
                   </ul>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </section>
 
         {/* Residential Section */}
-        <section className="bg-primary/5 dark:bg-primary/10 py-10 sm:py-14 lg:py-16">
+        <section className="bg-primary/5 dark:bg-primary/10 py-10 sm:py-14 lg:py-16 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <div className="flex items-center gap-3 sm:gap-4 mb-8 sm:mb-12 border-b border-slate-200 dark:border-slate-800 pb-4">
+            <motion.div 
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ duration: 0.5 }}
+              className="flex items-center gap-3 sm:gap-4 mb-8 sm:mb-12 border-b border-slate-200 dark:border-slate-800 pb-4"
+            >
               <span className="material-symbols-outlined text-primary text-2xl sm:text-3xl">home</span>
               <h3 className="text-2xl sm:text-3xl font-bold">Residential Services</h3>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+            </motion.div>
+            
+            <motion.div 
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              variants={staggerContainer}
+            >
               {residentialServices.map((service, i) => (
-                <div key={i} className="flex flex-col items-center text-center group">
-                  <div className="w-full h-56 sm:h-64 rounded-xl overflow-hidden mb-5 sm:mb-6 relative">
+                <motion.div 
+                  key={i} 
+                  variants={fadeInUp}
+                  transition={{ duration: 0.5 }}
+                  whileHover={{
+                    y: -6,
+                  }}
+                  whileTap={{ scale: 0.98 }}
+                  className="flex flex-col items-center text-center group cursor-pointer"
+                >
+                  <div className="w-full h-56 sm:h-64 rounded-xl overflow-hidden mb-5 sm:mb-6 relative border border-primary/5">
                     <Image
                       alt={service.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
@@ -198,27 +280,43 @@ const ServicesPage = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="max-w-4xl mx-auto px-4 sm:px-6 py-14 sm:py-20">
-          <div className="text-center mb-10 sm:mb-16">
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 py-14 sm:py-20 overflow-hidden">
+          <motion.div 
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-10 sm:mb-16"
+          >
             <h3 className="text-2xl sm:text-3xl font-bold mb-4">Frequently Asked Questions</h3>
             <div className="w-20 h-1 bg-primary mx-auto" />
-          </div>
-          <div className="space-y-3 sm:space-y-4">
+          </motion.div>
+          
+          <motion.div 
+            className="space-y-3 sm:space-y-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            variants={staggerContainer}
+          >
             {faqs.map((faq, i) => (
-              <div
+              <motion.div
                 key={i}
-                className="border border-slate-200 dark:border-slate-800 rounded-xl bg-white dark:bg-slate-900 overflow-hidden"
+                variants={fadeInUp}
+                transition={{ duration: 0.5 }}
+                className="border border-slate-200 dark:border-slate-800 rounded-xl bg-white dark:bg-slate-900 overflow-hidden shadow-sm"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full flex items-center justify-between p-4 sm:p-5 text-left font-semibold text-sm sm:text-base"
+                  className="w-full flex items-center justify-between p-4 sm:p-5 text-left font-semibold text-sm sm:text-base cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800/25 transition-colors duration-200"
                 >
                   <span>{faq.q}</span>
                   <span
@@ -229,14 +327,24 @@ const ServicesPage = () => {
                     expand_more
                   </span>
                 </button>
-                {openFaq === i && (
-                  <div className="px-4 sm:px-5 pb-4 sm:pb-5 text-slate-600 dark:text-slate-400 text-sm leading-relaxed border-t border-slate-50 dark:border-slate-800 pt-4">
-                    {faq.a}
-                  </div>
-                )}
-              </div>
+                <AnimatePresence initial={false}>
+                  {openFaq === i && (
+                    <motion.div 
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: 'easeInOut' }}
+                      className="overflow-hidden border-t border-slate-50 dark:border-slate-800"
+                    >
+                      <div className="px-4 sm:px-5 pb-4 sm:pb-5 text-slate-600 dark:text-slate-400 text-sm leading-relaxed pt-4">
+                        {faq.a}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </section>
 
       </div>

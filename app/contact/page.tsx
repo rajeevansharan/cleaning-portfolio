@@ -1,32 +1,77 @@
 'use client';
 
 import React from 'react';
+import { motion } from 'framer-motion';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 },
+  },
+};
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};
+
+const scaleUp = {
+  hidden: { opacity: 0, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+  },
+};
 
 const ContactPage = () => {
   return (
     <main className="min-h-screen flex flex-col">
       <Navbar />
       <div className="flex-1">
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-10 sm:py-14 lg:py-20">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-10 sm:py-14 lg:py-20 overflow-hidden">
 
           {/* Heading */}
-          <div className="mb-10 sm:mb-16 text-center lg:text-left">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-primary dark:text-white mb-3 sm:mb-4 tracking-tight">
+          <motion.div 
+            className="mb-10 sm:mb-16 text-center"
+            initial="hidden"
+            animate="visible"
+            variants={staggerContainer}
+          >
+            <motion.h2 
+              variants={fadeInUp}
+              transition={{ duration: 0.6 }}
+              className="text-3xl sm:text-4xl lg:text-5xl font-black text-primary dark:text-white mb-3 sm:mb-4 tracking-tight"
+            >
               Connect with Excellence
-            </h2>
-            <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0">
+            </motion.h2>
+            <motion.p 
+              variants={fadeInUp}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-2xl mx-auto"
+            >
               Tailored cleaning solutions for your home or office. Our premium care team is ready
               to assist you with a bespoke maintenance plan.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
 
           {/* Two-column grid */}
           <div className="grid lg:grid-cols-2 gap-10 sm:gap-16">
 
             {/* Contact Form */}
-            <div className="bg-white dark:bg-slate-900 p-6 sm:p-8 lg:p-10 rounded-2xl shadow-xl shadow-primary/5 border border-primary/5">
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              variants={fadeInUp}
+              transition={{ duration: 0.6 }}
+              className="bg-white dark:bg-slate-900 p-6 sm:p-8 lg:p-10 rounded-2xl shadow-xl shadow-primary/5 border border-primary/5"
+            >
               <h3 className="text-xl sm:text-2xl font-bold text-primary dark:text-white mb-6 sm:mb-8">
                 Request a Quote
               </h3>
@@ -76,16 +121,26 @@ const ContactPage = () => {
                     rows={4}
                   />
                 </div>
-                <button className="w-full bg-primary text-white font-bold py-4 rounded-lg hover:shadow-xl hover:shadow-primary/30 transition-all flex items-center justify-center gap-2">
+                <motion.button 
+                  whileHover={{ scale: 1.02, boxShadow: "0 10px 15px -3px rgb(0 0 0 / 0.1)" }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full bg-primary text-white font-bold py-4 rounded-lg hover:shadow-xl hover:shadow-primary/30 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                >
                   <span>Send Message</span>
                   <span className="material-symbols-outlined text-sm">send</span>
-                </button>
+                </motion.button>
               </form>
-            </div>
+            </motion.div>
 
-            {/* Contact Info */}
+            {/* Contact Info & Map */}
             <div className="flex flex-col gap-8 sm:gap-10">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+              <motion.div 
+                className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+                variants={staggerContainer}
+              >
                 {[
                   { icon: 'call', title: 'Call Us', line1: '+1 (800) 234-5678', line2: 'Mon - Fri, 8am - 6pm' },
                   { icon: 'mail', title: 'Email Us', line1: 'concierge@eliteclean.com', line2: '24hr response guarantee' },
@@ -102,7 +157,12 @@ const ContactPage = () => {
                     line2: 'Malibu, and Pasadena.',
                   },
                 ].map(({ icon, title, line1, line2 }) => (
-                  <div key={title} className="flex gap-4">
+                  <motion.div 
+                    key={title} 
+                    variants={fadeInUp}
+                    transition={{ duration: 0.5 }}
+                    className="flex gap-4"
+                  >
                     <div className="size-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0">
                       <span className="material-symbols-outlined">{icon}</span>
                     </div>
@@ -111,51 +171,73 @@ const ContactPage = () => {
                       <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base">{line1}</p>
                       <p className="text-xs text-slate-400 mt-0.5">{line2}</p>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
 
-              {/* Map placeholder */}
-              <div className="relative w-full h-64 sm:h-80 rounded-2xl overflow-hidden shadow-inner bg-slate-200 border border-primary/10 group">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 mix-blend-overlay" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center z-10">
-                    <span className="material-symbols-outlined text-primary text-5xl mb-2">explore</span>
-                    <p className="text-primary font-bold">Interactive Service Map</p>
-                  </div>
-                </div>
-                <img
-                  alt="City map"
-                  className="w-full h-full object-cover opacity-40 grayscale group-hover:grayscale-0 transition-all duration-700"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUK_s11BqfA-iUmtejDvH_n6_ejJpqtDEJ_Bb_p8B4eq-NdFLdCpJiRo_XdvJw3XYSvt7nlO71dygAbPiYbKLmGujU7ESYsPcE4P-1mCk-le8I2bjeSs0bj3wQAhrBcYh9rGbCPIyLRHtKLb0nRtsM_FrfBOGB2o-JpANF4IPFbmMejb5UpASkmm2e6r6Koqg9Mafh8cSbxgCzKsoqSO47QebI3g-Z4jE0LnR75jXalcHYqSVp1GuyATqnuPQQla4mPgppUEVPiIT7"
-                />
-              </div>
+              {/* Interactive Google Map */}
+              <motion.div 
+                className="relative w-full h-64 sm:h-80 rounded-2xl overflow-hidden shadow-inner bg-slate-200 border border-primary/10 group cursor-pointer"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+                variants={scaleUp}
+                transition={{ duration: 0.6 }}
+                whileHover={{ scale: 1.01 }}
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15844.20017129188!2d79.8516086871582!3d6.9085189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596ad7cf2f97%3A0x86134b266395e26!2sColombo%2007%2C%20Colombo!5e0!3m2!1sen!2slk!4v1700000000000!5m2!1sen!2slk"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, filter: "grayscale(0.1)" }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </motion.div>
             </div>
           </div>
 
           {/* Service Area */}
           <section className="mt-16 sm:mt-24 py-12 sm:py-16 border-t border-primary/5">
-            <div className="text-center mb-8 sm:mb-12">
+            <motion.div 
+              className="text-center mb-8 sm:mb-12"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.15 }}
+              variants={fadeInUp}
+              transition={{ duration: 0.5 }}
+            >
               <h3 className="text-2xl sm:text-3xl font-black text-primary dark:text-white mb-2 tracking-tight">
                 Service Area Coverage
               </h3>
               <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base">
                 We proudly serve premium neighborhoods across the coast.
               </p>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+            </motion.div>
+            
+            <motion.div 
+              className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.15 }}
+              variants={staggerContainer}
+            >
               {['Beverly Hills', 'Santa Monica', 'Newport Beach', 'Laguna Niguel'].map((area) => (
-                <div
+                <motion.div
                   key={area}
-                  className="bg-primary/5 dark:bg-white/5 p-4 sm:p-6 rounded-xl border border-primary/10 text-center"
+                  variants={fadeInUp}
+                  transition={{ duration: 0.5 }}
+                  whileHover={{ y: -4 }}
+                  className="bg-primary/5 dark:bg-white/5 p-4 sm:p-6 rounded-xl border border-primary/10 text-center cursor-pointer transition-all duration-300"
                 >
                   <span className="text-primary dark:text-slate-300 font-bold text-sm sm:text-base">
                     {area}
                   </span>
-                </div>
+                </motion.div>
               ))}
-            </div>
-          </section>
+            </motion.div>
+          </section> 
 
         </section>
       </div>

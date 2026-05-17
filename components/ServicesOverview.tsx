@@ -1,6 +1,24 @@
+'use client';
+
 import React from 'react';
-import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { Building2, Briefcase, Factory, Key, Home, Sparkles } from 'lucide-react';
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 },
+  },
+};
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};
 
 const ServicesOverview = () => {
   const services = [
@@ -37,21 +55,45 @@ const ServicesOverview = () => {
   ];
 
   return (
-    <section className="py-14 sm:py-20 lg:py-24 bg-background-light dark:bg-background-dark" id="services">
+    <section className="py-14 sm:py-20 lg:py-24 bg-background-light dark:bg-background-dark overflow-hidden" id="services">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10 sm:mb-16">
+        {/* Section Header */}
+        <motion.div 
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-10 sm:mb-16"
+        >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary dark:text-white mb-4">
             Our Premium Services
           </h2>
           <div className="h-1.5 w-24 bg-primary mx-auto rounded-full"></div>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        </motion.div>
+
+        {/* Cards Grid */}
+        <motion.div 
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={staggerContainer}
+        >
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <div
+              <motion.div
                 key={index}
-                className="group bg-white dark:bg-slate-800/50 p-8 rounded-2xl border border-primary/5 hover:border-primary/20 hover:shadow-xl transition-all"
+                variants={fadeInUp}
+                transition={{ duration: 0.5 }}
+                whileHover={{
+                  y: -6,
+                  boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05)",
+                  borderColor: "rgba(10, 38, 66, 0.15)",
+                }}
+                whileTap={{ scale: 0.98 }}
+                className="group bg-white dark:bg-slate-800/50 p-8 rounded-2xl border border-primary/5 transition-colors duration-300 cursor-pointer"
               >
                 <div className="flex items-center gap-4 mb-6">
                   <Icon className="h-8 w-8 text-primary dark:text-white group-hover:scale-110 transition-transform duration-300" />
@@ -60,10 +102,10 @@ const ServicesOverview = () => {
                 <p className="text-slate-500 dark:text-slate-400 mb-6">
                   {service.description}
                 </p>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

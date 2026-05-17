@@ -1,5 +1,24 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 },
+  },
+};
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};
 
 const Testimonials = () => {
   const testimonials = [
@@ -27,23 +46,46 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-14 sm:py-20 lg:py-24 bg-white dark:bg-background-dark/50" id="testimonials">
+    <section className="py-14 sm:py-20 lg:py-24 bg-white dark:bg-background-dark/50 overflow-hidden" id="testimonials">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        {/* Header Block */}
+        <motion.div 
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary dark:text-white">
             What Our Clients Say
           </h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        </motion.div>
+
+        {/* Testimonials Grid */}
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={staggerContainer}
+        >
           {testimonials.map((testimonial, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-background-light dark:bg-slate-800 p-10 rounded-3xl relative flex flex-col justify-between h-full"
+              variants={fadeInUp}
+              transition={{ duration: 0.5 }}
+              whileHover={{
+                y: -6,
+                boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05)"
+              }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-background-light dark:bg-slate-800 p-10 rounded-3xl relative flex flex-col justify-between h-full cursor-pointer transition-colors duration-300 border border-transparent hover:border-primary/5"
             >
               <div>
                 <div className="flex gap-1 text-yellow-500 mb-6">
                   {[...Array(5)].map((_, i) => (
-                    <span key={i} className="material-symbols-outlined">star</span>
+                    <span key={i} className="material-symbols-outlined select-none">star</span>
                   ))}
                 </div>
                 <p className="text-slate-600 dark:text-slate-300 text-lg italic mb-8">
@@ -66,9 +108,9 @@ const Testimonials = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
