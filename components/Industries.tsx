@@ -34,14 +34,7 @@ const Industries = () => {
               Tailored cleaning solutions for every specialized environment, from healthcare to heavy industry.
             </p>
           </div>
-          <div className="flex gap-2">
-            <button className="size-12 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
-              <span className="material-symbols-outlined">arrow_back</span>
-            </button>
-            <button className="size-12 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
-              <span className="material-symbols-outlined">arrow_forward</span>
-            </button>
-          </div>
+
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {industries.map((industry, index) => (

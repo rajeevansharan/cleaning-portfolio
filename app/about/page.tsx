@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
@@ -62,16 +63,23 @@ const AboutPage = () => {
         {/* Hero Section */}
         <section className="px-4 md:px-20 lg:px-40 py-10">
           <div className="layout-content-container flex flex-col max-w-[1200px] mx-auto">
-            <div className="bg-cover bg-center flex flex-col justify-end overflow-hidden bg-primary/10 rounded-xl min-h-[360px] relative px-8 py-12"
-                 style={{
-                   backgroundImage: `linear-gradient(180deg, rgba(10, 38, 66, 0.1) 0%, rgba(10, 38, 66, 0.8) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuA_fpNeDkARFGk2KUxRRYDxi0BHCqhWGd2TalE5iQcwqJhSllJQ0FRwJjPQzQ8xLO9p8SbvlDH8xDmp1bByxFVBoM7B4diCSIy1I07kPsTdZ8JWC0g2MqhrVfh_DakLAIr_-5UKT9-nhjfN6a8ElucjZu8b9CWTtHb-aSiT4EOEJunpzT-RJS7781xj2LndrKW2ml6lXLnrvtSJQYt-GdQa2c-uKjc7L-9j8E4zMgU0ylqbKcZAf7cp-RC1PdXGPxWd_1poh3l-NKZc")`
-                 }}>
-              <h1 className="text-white text-4xl md:text-5xl font-black leading-tight tracking-tight">
-                About ProClean Solutions
-              </h1>
-              <p className="text-white/80 text-lg max-w-xl mt-2">
-                Setting the standard in professional facility maintenance for over a decade.
-              </p>
+            <div className="flex flex-col justify-end overflow-hidden bg-primary/10 rounded-xl min-h-[360px] relative px-8 py-12">
+              <Image
+                src="/assets/Images/AboutHero.png"
+                alt="About Hero Background"
+                fill
+                priority
+                className="absolute inset-0 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-primary/80 z-10"></div>
+              <div className="relative z-20">
+                <h1 className="text-white text-4xl md:text-5xl font-black leading-tight tracking-tight">
+                  About PKS Services INC
+                </h1>
+                <p className="text-white/80 text-lg max-w-xl mt-2">
+                  Setting the standard in professional facility maintenance for over a decade.
+                </p>
+              </div>
             </div>
 
             {/* Stats Section */}
@@ -106,11 +114,12 @@ const AboutPage = () => {
                 </div>
               </div>
               <div className="flex-1 w-full">
-                <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img
+                <div className="rounded-xl overflow-hidden shadow-2xl relative w-full h-[400px]">
+                  <Image
+                    src="/assets/Images/ourstoryImage.png"
                     alt="Professional team"
-                    className="w-full h-[400px] object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv_COcVJEMAsYrjZZx-Tvv1u_i4rjsRJe87vq4bNX_folY95-SFCPgZvqDEBBO2DWGcrrjffUDqdaEyfNOv827Gy1r6Cs1pcTATtRIgSt5DUHOfsPBqoHT3ut3wkT7RBGHiTP0T16rbHJNxekeCyVIuBrZFSFtv3WncxrXB6KcSvujmPg_bqoHL0VQ9dhXaqPdCzZyUNqv6RwLt2dUAC-S8CpOQSbvSwOp1hdxE4g-1ZxyeFwcU4YPA0MDtgFPWoIkEJIFtUNMv8d8"
+                    fill
+                    className="object-cover"
                   />
                 </div>
               </div>

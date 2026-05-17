@@ -6,14 +6,14 @@ const Testimonials = () => {
       name: 'John Davis',
       role: 'CEO, TechFlow Solutions',
       initials: 'JD',
-      quote: '"CleanPro has transformed our office atmosphere. Their attention to detail is unmatched by any other service we\'ve used in the past five years."',
+      quote: '"PKS has transformed our office atmosphere. Their attention to detail is unmatched by any other service we\'ve used in the past five years."',
       featured: false
     },
     {
       name: 'Sarah Richards',
       role: 'Director, Elite Estates',
       initials: 'SR',
-      quote: '"Reliability is everything in property management. CleanPro never misses a beat and the results are consistently flawless across all our properties."',
+      quote: '"Reliability is everything in property management. PKS never misses a beat and the results are consistently flawless across all our properties."',
       featured: true
     },
     {
@@ -37,9 +37,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className={`bg-background-light dark:bg-slate-800 p-10 rounded-3xl relative ${
-                testimonial.featured ? 'border-2 border-primary shadow-xl rotate-1 md:rotate-2' : ''
-              }`}
+              className="bg-background-light dark:bg-slate-800 p-10 rounded-3xl relative"
             >
               <span className="material-symbols-outlined text-6xl text-primary/10 absolute top-6 right-8">
                 format_quote

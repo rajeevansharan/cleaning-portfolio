@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "CleanPro | Professional Commercial Cleaning Services",
+  title: "PKS | Professional Commercial Cleaning Services",
   description: "Delivering reliable, high-quality cleaning solutions for offices, industrial facilities, and residential properties.",
 };
 

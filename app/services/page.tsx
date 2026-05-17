@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
@@ -11,19 +12,19 @@ const ServicesPage = () => {
     {
       title: 'Office Cleaning',
       description: 'Daily or weekly maintenance for corporate headquarters and small businesses alike.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBgGnVSUwMYP2ad1w8DrOcN1lz_MbMWbhEs64n3lDs-te_3xn_wLoXEHfFHGtlNsSJpWB7Z4NyXiOPvEqCUKssGMDMjxLX93tF3T5zThEbkkDV4WBW-lIXbwv-HVcKmojJeJk4U1mbwmkJXM6xaH-9_290jLQmYiPvRzoRuIpEgEIkYN7ynV5XG2EHdIg1PaeZS8oyZQcUUxpH1HpuVzj7ATRCaGI6TKeO_UQl7j9oG_tJW5oswkaHpm6_ig2ib_E0i1HhS25armRGj',
+      image: '/assets/Images/corporate office.png',
       features: ['Improved employee morale', 'Sanitized high-touch areas', 'Flexible after-hours scheduling']
     },
     {
       title: 'Auto Dealerships',
       description: "Showroom-ready floor polishing and detailing to match your brand's luxury standard.",
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA5iFEYNmb3Z3Rg-t169Y3VWAnulDWFhbTmzQJUYdC5ke4_zLTi1-zUNdiGLvXnJx_f3fgJwlSGfpJRzi4ukqeuwdAFMXUWd_AXIG3gH5BNDiCb1wMU_7pTKYIqM3cXKQNe6Hghz-apcHdoW25ugYreFonaHp5a9-_Mu1x8fZzZaFk9249OYbO01D_gXZXq_D1Fs8Av_ld8K-dL2P9qpZVYgHclFtDYgyraoQswXyDPwhLC8i1_vZdbSkPOJ3nqHfUqraPFDpfo2hyv',
+      image: '/assets/Images/Auto Dealerships.png',
       features: ['Mirror-finish floor care', 'Glass facade streak-free cleaning', 'Customer lounge sanitation']
     },
     {
       title: 'Industrial & Factories',
       description: 'Specialized heavy-duty cleaning for warehouses and manufacturing facilities.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB1GSYk6PTbgeazttHJkoe5pRayHwi2_kPO_5qBHMH1U_cyyZ4CNJQX_INE8qPhPcrnDky4Rwe8aP9WLsekdhtTj0vtc_Lomti_ZozXfGlnwbZKJEy8N1qbtWB1T7jtlqTghj9KoKkW2TebHB9WSfFvAlCMaM5kfRisvvcHTCGWLGDVqnNa0Ajq0FrvxpbWUqLKxk3dalPUUC90C6Hr9Mnn3CwuecgzrnftOT5oc9Bxj3d71svz2JSzMjbSqPGosYOPfEdPL5byYfta',
+      image: '/assets/Images/Property Management.png',
       features: ['Compliance with safety standards', 'Degreasing & floor scrubbing', 'HVAC & vent cleaning']
     }
   ];
@@ -32,20 +33,20 @@ const ServicesPage = () => {
     {
       title: 'Regular Maintenance',
       description: 'Keep your home pristine with our weekly or bi-weekly scheduled visits.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA8js9nyz8eqGAx0HMoHHwFULxDrjsR5POw7rzlwTzknyl883QXZVV3KmxeKtRWcX5PyYxa3fcMGR5pnCm0jQEK_tLuFnrwocHy6Qm5Qp-H0TC9cqUWUuqIMYad7lrpUxSSd9HU0nInVfWgwaO_jDAdYyjQb9BQ24ASwaA_1gbLv5nuanEyR7qV-389GitIdk8sKE65BN8f5Zd64H6EdPbdwWf_OYIUvTww_-gu-sh2kIg5gsdwDC0fV8HOIG-IpYDqRMg3SPTRHxPD',
+      image: '/assets/Images/Regular Maintenance.png',
       tag: 'MOST POPULAR',
       features: ['General dusting & vacuuming', 'Kitchen & bathroom sanitation', 'Linens & trash removal']
     },
     {
       title: 'Deep Cleaning',
       description: 'An exhaustive top-to-bottom refresh for homes that need extra attention.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuChljTFM-xBsVHi8nK-objmME49KN9nzrpJHx40EYROXlJ7Yu3_Xo4jrieOloNMzlZRrYgeLEOTKWmjfvhVlbK8YaY0bzr5AA74YllR28icsX7Se01DR24zP5T4elj3bdrjoaUEpaAtFHHjncLDV1AtcaYzG8jHWmVwEwsc6LiZBCaYU1j35xs3Kl7oEF4rvzmLm-w15dt9pLnF2bT-DQLuRXvELjYa8OMX-eygNZXdSbaeFdfehpNmGrxoYjszoUyROz-fhwb8gV1T',
+      image: '/assets/Images/Deep Cleaning.png',
       features: ['Inside cabinets & appliances', 'Baseboards & detailed crevices', 'Tile grout scrubbing']
     },
     {
       title: 'Move In / Out',
       description: 'Starting fresh in a new home or leaving a property spotless for the next tenant.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDbUos_ZyAhCO7noed-exrK_zP7fVx7msECWSANkXBKHg16hB-2vsHhD5buSQHb7kUxzLMRufRGdRE1s19lLCmP4foaaeGcKqmTm9Am1OEVxkRZMhoBqbsMmZ3-SdcetGVFEVfVHijZcVuOjHGotx7sa50v6azfUQ9alsgqYZZM9UjaiByNu157KUlU1YEpwvdL_tw98OD19-7ZsZem_AYsNfCPKyz5RMYC4kCu0ih2hKyyb9hSqzxudcsg7G3lAQn6QC4NUStpvhyi',
+      image: '/assets/Images/Move.png',
       features: ['Wall washing & window tracks', 'Garage & storage sweeping', 'Closet & shelf detailed cleaning']
     }
   ];
@@ -76,12 +77,13 @@ const ServicesPage = () => {
         {/* Page Hero */}
         <section className="relative h-[400px] w-full flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 bg-slate-900/60 z-10"></div>
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: `url("https://lh3.googleusercontent.com/aida-public/AB6AXuBKMuFehKRTliHaodm7dXEZjKNyv1Ghw79xoBjCxXsORjRaiux7mIF7D5KJLQqDwjl935Tj-7-r-GKHvvNMEbw0EtW_I03uAiIO-dSGTR0VwiGGnbCsiPPxfT_qP2zdW1_xnjEDSYO0mdoL1Y3yzh5qIPD2aQXZtylHKx6RYR1xcAkW97xT9Upbts6onLzP6rADh8LGiM0bWDCqTIYeLFTaMXj5H_6x9OqCP7pEsLT0jvpSel_CZH2oP9gmi2C-B9OTytmrig811IRM")`
-            }}
-          ></div>
+          <Image
+            src="/assets/Images/corporate office.png"
+            alt="Corporate Office Background"
+            fill
+            priority
+            className="absolute inset-0 object-cover"
+          />
           <div className="relative z-20 text-center px-4">
             <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
               Our Premium Services
@@ -101,10 +103,14 @@ const ServicesPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {commercialServices.map((service, i) => (
               <div key={i} className="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all">
-                <div
-                  className="h-56 bg-cover bg-center"
-                  style={{ backgroundImage: `url("${service.image}")` }}
-                ></div>
+                <div className="relative h-56 w-full overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
                 <div className="p-6">
                   <h4 className="text-xl font-bold mb-3">{service.title}</h4>
                   <p className="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed">
@@ -118,9 +124,7 @@ const ServicesPage = () => {
                       </li>
                     ))}
                   </ul>
-                  <button className="w-full bg-primary/10 text-primary py-2 rounded-lg font-bold text-sm hover:bg-primary hover:text-white transition-colors">
-                    Request Quote
-                  </button>
+
                 </div>
               </div>
             ))}
@@ -138,10 +142,11 @@ const ServicesPage = () => {
               {residentialServices.map((service, i) => (
                 <div key={i} className="flex flex-col items-center text-center group">
                   <div className="w-full h-64 rounded-xl overflow-hidden mb-6 relative">
-                    <img
+                    <Image
                       alt={service.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       src={service.image}
+                      fill
                     />
                     {service.tag && (
                       <div className="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
@@ -156,14 +161,11 @@ const ServicesPage = () => {
                   <ul className="space-y-3 mb-8 text-left inline-block">
                     {service.features.map((f, j) => (
                       <li key={j} className="flex items-center gap-2">
-                        <span className="material-symbols-outlined text-primary">done</span>
+                        <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
                         {f}
                       </li>
                     ))}
                   </ul>
-                  <button className="mt-auto px-8 py-3 bg-primary text-white rounded-lg font-bold shadow-md hover:shadow-lg transition-all">
-                    Select Service
-                  </button>
                 </div>
               ))}
             </div>

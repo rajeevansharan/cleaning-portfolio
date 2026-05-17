@@ -30,7 +30,7 @@ const WhyChooseUs = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="flex flex-col items-center text-center p-6 rounded-xl hover:bg-primary/5 transition-colors">
-              <div className="size-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6">
+              <div className="size-16 bg-primary text-white rounded-2xl flex items-center justify-center mb-6">
                 <span className="material-symbols-outlined text-3xl">{feature.icon}</span>
               </div>
               <h3 className="text-xl font-bold mb-3">{feature.title}</h3>

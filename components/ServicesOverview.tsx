@@ -1,35 +1,36 @@
 import React from 'react';
 import Link from 'next/link';
+import { Building2, Briefcase, Factory, Key, Home, Sparkles } from 'lucide-react';
 
 const ServicesOverview = () => {
   const services = [
     {
-      icon: 'business',
+      icon: Building2,
       title: 'Commercial',
       description: 'Complete facility management and cleaning for business complexes and large venues.'
     },
     {
-      icon: 'desk',
+      icon: Briefcase,
       title: 'Office',
       description: 'Daily and weekly desk, floor, and communal area maintenance for productive environments.'
     },
     {
-      icon: 'factory',
+      icon: Factory,
       title: 'Industrial',
       description: 'Specialized heavy-duty cleaning for warehouses, factories, and production facilities.'
     },
     {
-      icon: 'real_estate_agent',
+      icon: Key,
       title: 'Real Estate',
       description: 'Move-in/move-out services and staging preparation to maximize property value.'
     },
     {
-      icon: 'home',
+      icon: Home,
       title: 'Residential',
       description: 'Customized home cleaning plans for busy professionals and luxury residences.'
     },
     {
-      icon: 'cleaning',
+      icon: Sparkles,
       title: 'Janitorial',
       description: 'Ongoing custodial support including sanitation, waste removal, and restocking.'
     }
@@ -45,27 +46,23 @@ const ServicesOverview = () => {
           <div className="h-1.5 w-24 bg-primary mx-auto rounded-full"></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="group bg-white dark:bg-slate-800/50 p-8 rounded-2xl border border-primary/5 hover:border-primary/20 hover:shadow-xl transition-all"
-            >
-              <span className="material-symbols-outlined text-4xl text-primary mb-6">
-                {service.icon}
-              </span>
-              <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
-              <p className="text-slate-500 dark:text-slate-400 mb-6">
-                {service.description}
-              </p>
-              <Link
-                href="/services"
-                className="inline-flex items-center text-primary font-bold hover:gap-2 transition-all"
+          {services.map((service, index) => {
+            const Icon = service.icon;
+            return (
+              <div
+                key={index}
+                className="group bg-white dark:bg-slate-800/50 p-8 rounded-2xl border border-primary/5 hover:border-primary/20 hover:shadow-xl transition-all"
               >
-                Learn More
-                <span className="material-symbols-outlined ml-1">chevron_right</span>
-              </Link>
-            </div>
-          ))}
+                <div className="flex items-center gap-4 mb-6">
+                  <Icon className="h-8 w-8 text-primary dark:text-white group-hover:scale-110 transition-transform duration-300" />
+                  <h3 className="text-2xl font-bold">{service.title}</h3>
+                </div>
+                <p className="text-slate-500 dark:text-slate-400 mb-6">
+                  {service.description}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
