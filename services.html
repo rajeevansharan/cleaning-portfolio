@@ -1,0 +1,767 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0a2642",
+              "background-light": "#f6f7f8",
+              "background-dark": "#111921",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors"
+  >
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+    <!-- Sticky Navbar -->
+    <header
+      class="sticky top-0 z-50 w-full bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-primary/10"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <div class="flex items-center gap-2">
+            <div class="bg-primary text-white p-1.5 rounded-lg">
+              <span class="material-symbols-outlined text-2xl"
+                >cleaning_services</span
+              >
+            </div>
+            <h2
+              class="text-primary dark:text-white text-2xl font-black tracking-tight"
+            >
+              CleanPro
+            </h2>
+          </div>
+          <nav class="hidden md:flex items-center gap-8">
+            <a
+              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white font-medium text-sm transition-colors"
+              href="index.html"
+              >Home</a
+            >
+            <a
+              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white font-medium text-sm transition-colors"
+              href="services.html"
+              >Services</a
+            >
+            <a
+              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white font-medium text-sm transition-colors"
+              href="about.html"
+              >About Us</a
+            >
+            <a
+              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white font-medium text-sm transition-colors"
+              href="contact.html"
+              >Contact</a
+            >
+          </nav>
+          <div class="flex items-center gap-4">
+            <button
+              class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide hover:opacity-90 transition-all"
+            >
+              Get Free Quote
+            </button>
+            <button class="md:hidden text-primary dark:text-white">
+              <span class="material-symbols-outlined">menu</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+      <main class="flex-1">
+        <section
+          class="relative h-[400px] w-full flex items-center justify-center overflow-hidden"
+        >
+          <div class="absolute inset-0 bg-slate-900/60 z-10"></div>
+          <div
+            class="absolute inset-0 bg-cover bg-center"
+            data-alt="Modern clean office interior with glass walls"
+            style="
+              background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBKMuFehKRTliHaodm7dXEZjKNyv1Ghw79xoBjCxXsORjRaiux7mIF7D5KJLQqDwjl935Tj-7-r-GKHvvNMEbw0EtW_I03uAiIO-dSGTR0VwiGGnbCsiPPxfT_qP2zdW1_xnjEDSYO0mdoL1Y3yzh5qIPD2aQXZtylHKx6RYR1xcAkW97xT9Upbts6onLzP6rADh8LGiM0bWDCqTIYeLFTaMXj5H_6x9OqCP7pEsLT0jvpSel_CZH2oP9gmi2C-B9OTytmrig811IRM&quot;);
+            "
+          ></div>
+          <div class="relative z-20 text-center px-4">
+            <h2
+              class="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight"
+            >
+              Our Premium Services
+            </h2>
+            <p class="text-lg text-slate-200 max-w-2xl mx-auto">
+              Meticulous cleaning solutions tailored for high-end corporate
+              environments and luxury residences.
+            </p>
+          </div>
+        </section>
+        <section class="max-w-7xl mx-auto px-6 py-16">
+          <div
+            class="flex items-center gap-4 mb-12 border-b border-slate-200 dark:border-slate-800 pb-4"
+          >
+            <span class="material-symbols-outlined text-primary text-3xl"
+              >corporate_fare</span
+            >
+            <h3 class="text-3xl font-bold">Commercial Cleaning</h3>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all"
+            >
+              <div
+                class="h-56 bg-cover bg-center"
+                data-alt="Corporate office space with workstations"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBgGnVSUwMYP2ad1w8DrOcN1lz_MbMWbhEs64n3lDs-te_3xn_wLoXEHfFHGtlNsSJpWB7Z4NyXiOPvEqCUKssGMDMjxLX93tF3T5zThEbkkDV4WBW-lIXbwv-HVcKmojJeJk4U1mbwmkJXM6xaH-9_290jLQmYiPvRzoRuIpEgEIkYN7ynV5XG2EHdIg1PaeZS8oyZQcUUxpH1HpuVzj7ATRCaGI6TKeO_UQl7j9oG_tJW5oswkaHpm6_ig2ib_E0i1HhS25armRGj&quot;);
+                "
+              ></div>
+              <div class="p-6">
+                <h4 class="text-xl font-bold mb-3">Office Cleaning</h4>
+                <p
+                  class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed"
+                >
+                  Daily or weekly maintenance for corporate headquarters and
+                  small businesses alike.
+                </p>
+                <ul class="space-y-2 mb-6 text-sm">
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-sm"
+                      >check_circle</span
+                    >
+                    Improved employee morale
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-sm"
+                      >check_circle</span
+                    >
+                    Sanitized high-touch areas
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-sm"
+                      >check_circle</span
+                    >
+                    Flexible after-hours scheduling
+                  </li>
+                </ul>
+                <button
+                  class="w-full bg-primary/10 text-primary py-2 rounded-lg font-bold text-sm hover:bg-primary hover:text-white transition-colors"
+                >
+                  Request Quote
+                </button>
+              </div>
+            </div>
+            <div
+              class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all"
+            >
+              <div
+                class="h-56 bg-cover bg-center"
+                data-alt="Luxury car showroom interior"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuA5iFEYNmb3Z3Rg-t169Y3VWAnulDWFhbTmzQJUYdC5ke4_zLTi1-zUNdiGLvXnJx_f3fgJwlSGfpJRzi4ukqeuwdAFMXUWd_AXIG3gH5BNDiCb1wMU_7pTKYIqM3cXKQNe6Hghz-apcHdoW25ugYreFonaHp5a9-_Mu1x8fZzZaFk9249OYbO01D_gXZXq_D1Fs8Av_ld8K-dL2P9qpZVYgHclFtDYgyraoQswXyDPwhLC8i1_vZdbSkPOJ3nqHfUqraPFDpfo2hyv&quot;);
+                "
+              ></div>
+              <div class="p-6">
+                <h4 class="text-xl font-bold mb-3">Auto Dealerships</h4>
+                <p
+                  class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed"
+                >
+                  Showroom-ready floor polishing and detailing to match your
+                  brand's luxury standard.
+                </p>
+                <ul class="space-y-2 mb-6 text-sm">
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-sm"
+                      >check_circle</span
+                    >
+                    Mirror-finish floor care
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-sm"
+                      >check_circle</span
+                    >
+                    Glass facade streak-free cleaning
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-sm"
+                      >check_circle</span
+                    >
+                    Customer lounge sanitation
+                  </li>
+                </ul>
+                <button
+                  class="w-full bg-primary/10 text-primary py-2 rounded-lg font-bold text-sm hover:bg-primary hover:text-white transition-colors"
+                >
+                  View Details
+                </button>
+              </div>
+            </div>
+            <div
+              class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all"
+            >
+              <div
+                class="h-56 bg-cover bg-center"
+                data-alt="Large industrial factory floor"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuB1GSYk6PTbgeazttHJkoe5pRayHwi2_kPO_5qBHMH1U_cyyZ4CNJQX_INE8qPhPcrnDky4Rwe8aP9WLsekdhtTj0vtc_Lomti_ZozXfGlnwbZKJEy8N1qbtWB1T7jtlqTghj9KoKkW2TebHB9WSfFvAlCMaM5kfRisvvcHTCGWLGDVqnNa0Ajq0FrvxpbWUqLKxk3dalPUUC90C6Hr9Mnn3CwuecgzrnftOT5oc9Bxj3d71svz2JSzMjbSqPGosYOPfEdPL5byYfta&quot;);
+                "
+              ></div>
+              <div class="p-6">
+                <h4 class="text-xl font-bold mb-3">
+                  Industrial &amp; Factories
+                </h4>
+                <p
+                  class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed"
+                >
+                  Specialized heavy-duty cleaning for warehouses and
+                  manufacturing facilities.
+                </p>
+                <ul class="space-y-2 mb-6 text-sm">
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-sm"
+                      >check_circle</span
+                    >
+                    Compliance with safety standards
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-sm"
+                      >check_circle</span
+                    >
+                    Degreasing &amp; floor scrubbing
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-sm"
+                      >check_circle</span
+                    >
+                    HVAC &amp; vent cleaning
+                  </li>
+                </ul>
+                <button
+                  class="w-full bg-primary/10 text-primary py-2 rounded-lg font-bold text-sm hover:bg-primary hover:text-white transition-colors"
+                >
+                  Custom Solution
+                </button>
+              </div>
+            </div>
+            <div
+              class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all"
+            >
+              <div
+                class="h-56 bg-cover bg-center"
+                data-alt="Real estate office or staged house"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDis5ZYMVD14XSIKb9RXq9_PBN405AwEWX1fwVuhnPB4yFEJ1WjpW2u-ljeZSa7oB_QKsPfApxziy1SpD47Mg-hmKjzRfbB4RtgG24ot3z8SJp1SrAqLq510TfNSF6ZUAaRer0o32EcPfZ71BKztR8NOSeljD5xx1X8T9z1yRPRsgS1P0Z0b4lrNr04YiyMuhzCj4CjH3hYfm2foHarMlb0u_AElpwAaItoZW0_Gp2M5RJ89GLf4Rk7NDHpL6gPAoBlSxZazAR1nQhp&quot;);
+                "
+              ></div>
+              <div class="p-6">
+                <h4 class="text-xl font-bold mb-3">Real Estate Services</h4>
+                <p
+                  class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed"
+                >
+                  Pre-listing deep cleans to ensure properties show at their
+                  absolute best.
+                </p>
+                <ul class="space-y-2 mb-6 text-sm">
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-sm"
+                      >check_circle</span
+                    >
+                    Photography-ready results
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-sm"
+                      >check_circle</span
+                    >
+                    Rapid turnaround times
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-sm"
+                      >check_circle</span
+                    >
+                    Exterior &amp; interior detailing
+                  </li>
+                </ul>
+                <button
+                  class="w-full bg-primary/10 text-primary py-2 rounded-lg font-bold text-sm hover:bg-primary hover:text-white transition-colors"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+            <div
+              class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all"
+            >
+              <div
+                class="h-56 bg-cover bg-center"
+                data-alt="Modern apartment building exterior"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBInv4Qq_0O-I_oEFGkuwGEyNWL-jsFqVQ0ybn83_BZDbZ3f3iPpI--6LSfbDA664P7xHZ1VZYvOqjzawiDliNURxke-Qkg46pRuh39svekMF3k7N0FjlvZdD9yqyArr_c95FEt1XmweKRdSYTkTCH6NAxjtqC9LY7iYNlDqyzM4S6J79L1wkyAZIBpw289Ccq8lhH-Y3n5peLZm2EASqeN-lC-dId4vr8wGMUrlldzzXEh-gVX7P73AtHUZ79OXI25C6PbV-HalBQc&quot;);
+                "
+              ></div>
+              <div class="p-6">
+                <h4 class="text-xl font-bold mb-3">Condominium Care</h4>
+                <p
+                  class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed"
+                >
+                  Common area maintenance for luxury high-rises and residential
+                  complexes.
+                </p>
+                <ul class="space-y-2 mb-6 text-sm">
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-sm"
+                      >check_circle</span
+                    >
+                    Lobby &amp; hallway polishing
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-sm"
+                      >check_circle</span
+                    >
+                    Gym &amp; pool area sanitization
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-sm"
+                      >check_circle</span
+                    >
+                    Dedicated on-site staff
+                  </li>
+                </ul>
+                <button
+                  class="w-full bg-primary/10 text-primary py-2 rounded-lg font-bold text-sm hover:bg-primary hover:text-white transition-colors"
+                >
+                  Request Bid
+                </button>
+              </div>
+            </div>
+            <div
+              class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all"
+            >
+              <div
+                class="h-56 bg-cover bg-center"
+                data-alt="Janitor cleaning floor with equipment"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuB-ZtPttexlykwfxOlAW_YZZ9aingzlh64Hx-132_E9ydadvWGpoph7zIDGe0LMaGuApJHE6An3lFNvh3YjrF2gDnxvouJPtK7yMWTVDEoj3p53t4bFAz9djby_NMIqxBkLrCBEgQ2u3khEcoOJMbOczX2XhD_lPjz5per9O7gLWGZWSErwHqbGkJs3r9rOtVzQtPCaBJSfOFBkeuntI3s3RR3zass0kvkoFS0gVY3cV3UaQdY9zQG44Or7LpGKyKAXRFsK-2LC2rvt&quot;);
+                "
+              ></div>
+              <div class="p-6">
+                <h4 class="text-xl font-bold mb-3">Janitorial Programs</h4>
+                <p
+                  class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed"
+                >
+                  Comprehensive, recurring cleaning contracts for long-term
+                  facility management.
+                </p>
+                <ul class="space-y-2 mb-6 text-sm">
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-sm"
+                      >check_circle</span
+                    >
+                    24/7 Support availability
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-sm"
+                      >check_circle</span
+                    >
+                    Eco-friendly supply restocking
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-sm"
+                      >check_circle</span
+                    >
+                    Quarterly quality audits
+                  </li>
+                </ul>
+                <button
+                  class="w-full bg-primary/10 text-primary py-2 rounded-lg font-bold text-sm hover:bg-primary hover:text-white transition-colors"
+                >
+                  Custom Plan
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="bg-primary/5 dark:bg-primary/10 py-16">
+          <div class="max-w-7xl mx-auto px-6">
+            <div
+              class="flex items-center gap-4 mb-12 border-b border-slate-200 dark:border-slate-800 pb-4"
+            >
+              <span class="material-symbols-outlined text-primary text-3xl"
+                >home</span
+              >
+              <h3 class="text-3xl font-bold">Residential Services</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+              <div class="flex flex-col items-center text-center group">
+                <div
+                  class="w-full h-64 rounded-xl overflow-hidden mb-6 relative"
+                >
+                  <img
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    data-alt="Clean minimalist residential living room"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8js9nyz8eqGAx0HMoHHwFULxDrjsR5POw7rzlwTzknyl883QXZVV3KmxeKtRWcX5PyYxa3fcMGR5pnCm0jQEK_tLuFnrwocHy6Qm5Qp-H0TC9cqUWUuqIMYad7lrpUxSSd9HU0nInVfWgwaO_jDAdYyjQb9BQ24ASwaA_1gbLv5nuanEyR7qV-389GitIdk8sKE65BN8f5Zd64H6EdPbdwWf_OYIUvTww_-gu-sh2kIg5gsdwDC0fV8HOIG-IpYDqRMg3SPTRHxPD"
+                  />
+                  <div
+                    class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full"
+                  >
+                    MOST POPULAR
+                  </div>
+                </div>
+                <h4 class="text-2xl font-bold mb-3">Regular Maintenance</h4>
+                <p class="text-slate-600 dark:text-slate-400 mb-6 px-4">
+                  Keep your home pristine with our weekly or bi-weekly scheduled
+                  visits.
+                </p>
+                <ul class="space-y-3 mb-8 text-left inline-block">
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary"
+                      >done</span
+                    >
+                    General dusting &amp; vacuuming
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary"
+                      >done</span
+                    >
+                    Kitchen &amp; bathroom sanitation
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary"
+                      >done</span
+                    >
+                    Linens &amp; trash removal
+                  </li>
+                </ul>
+                <button
+                  class="mt-auto px-8 py-3 bg-primary text-white rounded-lg font-bold shadow-md hover:shadow-lg transition-all"
+                >
+                  Select Regular
+                </button>
+              </div>
+              <div class="flex flex-col items-center text-center group">
+                <div class="w-full h-64 rounded-xl overflow-hidden mb-6">
+                  <img
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    data-alt="Deep cleaning of kitchen counters"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuChljTFM-xBsVHi8nK-objmME49KN9nzrpJHx40EYROXlJ7Yu3_Xo4jrieOloNMzlZRrYgeLEOTKWmjfvhVlbK8YaY0bzr5AA74YllR28icsX7Se01DR24zP5T4elj3bdrjoaUEpaAtFHHjncLDV1AtcaYzG8jHWmVwEwsc6LiZBCaYU1j35xs3Kl7oEF4rvzmLm-w15dt9pLnF2bT-DQLuRXvELjYa8OMX-eygNZXdSbaeFdfehpNmGrxoYjszoUyROz-fhwb8gV1T"
+                  />
+                </div>
+                <h4 class="text-2xl font-bold mb-3">Deep Cleaning</h4>
+                <p class="text-slate-600 dark:text-slate-400 mb-6 px-4">
+                  An exhaustive top-to-bottom refresh for homes that need extra
+                  attention.
+                </p>
+                <ul class="space-y-3 mb-8 text-left inline-block">
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary"
+                      >done</span
+                    >
+                    Inside cabinets &amp; appliances
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary"
+                      >done</span
+                    >
+                    Baseboards &amp; detailed crevices
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary"
+                      >done</span
+                    >
+                    Tile grout scrubbing
+                  </li>
+                </ul>
+                <button
+                  class="mt-auto px-8 py-3 bg-primary text-white rounded-lg font-bold shadow-md hover:shadow-lg transition-all"
+                >
+                  Select Deep
+                </button>
+              </div>
+              <div class="flex flex-col items-center text-center group">
+                <div class="w-full h-64 rounded-xl overflow-hidden mb-6">
+                  <img
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    data-alt="Empty clean apartment for moving"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbUos_ZyAhCO7noed-exrK_zP7fVx7msECWSANkXBKHg16hB-2vsHhD5buSQHb7kUxzLMRufRGdRE1s19lLCmP4foaaeGcKqmTm9Am1OEVxkRZMhoBqbsMmZ3-SdcetGVFEVfVHijZcVuOjHGotx7sa50v6azfUQ9alsgqYZZM9UjaiByNu157KUlU1YEpwvdL_tw98OD19-7ZsZem_AYsNfCPKyz5RMYC4kCu0ih2hKyyb9hSqzxudcsg7G3lAQn6QC4NUStpvhyi"
+                  />
+                </div>
+                <h4 class="text-2xl font-bold mb-3">Move In / Out</h4>
+                <p class="text-slate-600 dark:text-slate-400 mb-6 px-4">
+                  Starting fresh in a new home or leaving a property spotless
+                  for the next tenant.
+                </p>
+                <ul class="space-y-3 mb-8 text-left inline-block">
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary"
+                      >done</span
+                    >
+                    Wall washing &amp; window tracks
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary"
+                      >done</span
+                    >
+                    Garage &amp; storage sweeping
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary"
+                      >done</span
+                    >
+                    Closet &amp; shelf detailed cleaning
+                  </li>
+                </ul>
+                <button
+                  class="mt-auto px-8 py-3 bg-primary text-white rounded-lg font-bold shadow-md hover:shadow-lg transition-all"
+                >
+                  Select Move Service
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="max-w-4xl mx-auto px-6 py-20">
+          <div class="text-center mb-16">
+            <h3 class="text-3xl font-bold mb-4">Frequently Asked Questions</h3>
+            <div class="w-20 h-1 bg-primary mx-auto"></div>
+          </div>
+          <div class="space-y-4">
+            <div
+              class="border border-slate-200 dark:border-slate-800 rounded-xl bg-white dark:bg-slate-900 overflow-hidden"
+            >
+              <button
+                class="w-full flex items-center justify-between p-5 text-left font-semibold"
+              >
+                <span>How do you screen your cleaning professionals?</span>
+                <span class="material-symbols-outlined">expand_more</span>
+              </button>
+              <div
+                class="px-5 pb-5 text-slate-600 dark:text-slate-400 text-sm leading-relaxed border-t border-slate-50 dark:border-slate-800 pt-4"
+              >
+                All our staff undergo rigorous background checks, intensive
+                professional training, and are fully insured and bonded to
+                provide you with peace of mind.
+              </div>
+            </div>
+            <div
+              class="border border-slate-200 dark:border-slate-800 rounded-xl bg-white dark:bg-slate-900 overflow-hidden"
+            >
+              <button
+                class="w-full flex items-center justify-between p-5 text-left font-semibold"
+              >
+                <span>Do you provide your own cleaning supplies?</span>
+                <span class="material-symbols-outlined">expand_more</span>
+              </button>
+              <div
+                class="px-5 pb-5 text-slate-600 dark:text-slate-400 text-sm leading-relaxed border-t border-slate-50 dark:border-slate-800 pt-4"
+              >
+                Yes, we provide all eco-friendly, hospital-grade cleaning
+                solutions and state-of-the-art equipment (HEPA vacuum cleaners,
+                microfiber tools) at no extra cost.
+              </div>
+            </div>
+            <div
+              class="border border-slate-200 dark:border-slate-800 rounded-xl bg-white dark:bg-slate-900 overflow-hidden"
+            >
+              <button
+                class="w-full flex items-center justify-between p-5 text-left font-semibold"
+              >
+                <span>What is your cancellation policy?</span>
+                <span class="material-symbols-outlined">expand_more</span>
+              </button>
+              <div
+                class="px-5 pb-5 text-slate-600 dark:text-slate-400 text-sm leading-relaxed border-t border-slate-50 dark:border-slate-800 pt-4"
+              >
+                We request a 24-hour notice for any cancellations or
+                rescheduling. Cancellations with less than 24 hours' notice may
+                be subject to a nominal fee.
+              </div>
+            </div>
+            <div
+              class="border border-slate-200 dark:border-slate-800 rounded-xl bg-white dark:bg-slate-900 overflow-hidden"
+            >
+              <button
+                class="w-full flex items-center justify-between p-5 text-left font-semibold"
+              >
+                <span>Are your services customized to my needs?</span>
+                <span class="material-symbols-outlined">expand_more</span>
+              </button>
+              <div
+                class="px-5 pb-5 text-slate-600 dark:text-slate-400 text-sm leading-relaxed border-t border-slate-50 dark:border-slate-800 pt-4"
+              >
+                Absolutely. We perform a preliminary assessment for all
+                commercial clients to build a custom scope of work that fits
+                your specific industry requirements.
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    <!-- Footer -->
+    <footer
+      class="bg-slate-900 text-slate-400 pt-20 pb-10 border-t border-white/5"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+          <div class="col-span-1 md:col-span-1">
+            <div class="flex items-center gap-2 mb-6">
+              <div class="bg-primary text-white p-1.5 rounded-lg">
+                <span class="material-symbols-outlined text-2xl"
+                  >cleaning_services</span
+                >
+              </div>
+              <h2 class="text-white text-2xl font-black tracking-tight">
+                CleanPro
+              </h2>
+            </div>
+            <p class="text-sm leading-relaxed mb-8">
+              The leading choice for premium commercial and residential cleaning
+              services since 2008.
+            </p>
+            <div class="flex gap-4">
+              <a
+                class="size-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-sm">public</span>
+              </a>
+              <a
+                class="size-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >alternate_email</span
+                >
+              </a>
+              <a
+                class="size-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-sm">call</span>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-6">Quick Links</h4>
+            <ul class="space-y-4 text-sm">
+              <li>
+                <a
+                  class="hover:text-primary transition-colors"
+                  href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-primary transition-colors"
+                  href="services.html"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-primary transition-colors"
+                  href="about.html"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-primary transition-colors"
+                  href="contact.html"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-6">Company</h4>
+            <ul class="space-y-4 text-sm">
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Our Process</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Sustainability</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-6">Contact Us</h4>
+            <ul class="space-y-4 text-sm">
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary"
+                  >location_on</span
+                >
+                <span>123 Clean Way, Suite 500<br />Metropolis, NY 10001</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary">call</span>
+                <span>(800) 555-0123</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary">mail</span>
+                <span>hello@cleanpro.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    </div>
+  </body>
+</html>

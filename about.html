@@ -1,0 +1,550 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0a2642",
+              "background-light": "#f6f7f8",
+              "background-dark": "#111921",
+            },
+            fontFamily: {
+              display: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <title>About Us | ProClean Solutions</title>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100"
+  >
+    <div
+      class="relative flex h-auto min-screen w-full flex-col group/design-root overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <!-- Top Navigation Bar -->
+    <!-- Sticky Navbar -->
+    <header
+      class="sticky top-0 z-50 w-full bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-primary/10"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <div class="flex items-center gap-2">
+            <div class="bg-primary text-white p-1.5 rounded-lg">
+              <span class="material-symbols-outlined text-2xl"
+                >cleaning_services</span
+              >
+            </div>
+            <h2
+              class="text-primary dark:text-white text-2xl font-black tracking-tight"
+            >
+              CleanPro
+            </h2>
+          </div>
+          <nav class="hidden md:flex items-center gap-8">
+            <a
+              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white font-medium text-sm transition-colors"
+              href="index.html"
+              >Home</a
+            >
+            <a
+              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white font-medium text-sm transition-colors"
+              href="services.html"
+              >Services</a
+            >
+            <a
+              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white font-medium text-sm transition-colors"
+              href="about.html"
+              >About Us</a
+            >
+            <a
+              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white font-medium text-sm transition-colors"
+              href="contact.html"
+              >Contact</a
+            >
+          </nav>
+          <div class="flex items-center gap-4">
+            <button
+              class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide hover:opacity-90 transition-all"
+            >
+              Get Free Quote
+            </button>
+            <button class="md:hidden text-primary dark:text-white">
+              <span class="material-symbols-outlined">menu</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+        <main class="flex-1">
+          <!-- Hero Section -->
+          <div class="px-4 md:px-20 lg:px-40 py-10">
+            <div
+              class="layout-content-container flex flex-col max-w-[1200px] mx-auto"
+            >
+              <div class="@container">
+                <div class="@[480px]:py-3">
+                  <div
+                    class="bg-cover bg-center flex flex-col justify-end overflow-hidden bg-primary/10 @[480px]:rounded-xl min-h-[360px] relative"
+                    data-alt="Modern professional office building lobby with clean floors"
+                    style="
+                      background-image:
+                        linear-gradient(
+                          180deg,
+                          rgba(10, 38, 66, 0.1) 0%,
+                          rgba(10, 38, 66, 0.8) 100%
+                        ),
+                        url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuA_fpNeDkARFGk2KUxRRYDxi0BHCqhWGd2TalE5iQcwqJhSllJQ0FRwJjPQzQ8xLO9p8SbvlDH8xDmp1bByxFVBoM7B4diCSIy1I07kPsTdZ8JWC0g2MqhrVfh_DakLAIr_-5UKT9-nhjfN6a8ElucjZu8b9CWTtHb-aSiT4EOEJunpzT-RJS7781xj2LndrKW2ml6lXLnrvtSJQYt-GdQa2c-uKjc7L-9j8E4zMgU0ylqbKcZAf7cp-RC1PdXGPxWd_1poh3l-NKZc&quot;);
+                    "
+                  >
+                    <div class="flex p-8 flex-col gap-2">
+                      <h1
+                        class="text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]"
+                      >
+                        About ProClean Solutions
+                      </h1>
+                      <p class="text-white/80 text-lg max-w-xl">
+                        Setting the standard in professional facility
+                        maintenance for over a decade.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Stats Section -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 py-12">
+                <div
+                  class="flex flex-col items-center p-8 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm"
+                >
+                  <span
+                    class="text-primary dark:text-blue-400 text-4xl font-black mb-2"
+                    >500+</span
+                  >
+                  <span class="text-slate-500 dark:text-slate-400 font-medium"
+                    >Active Clients</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col items-center p-8 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm"
+                >
+                  <span
+                    class="text-primary dark:text-blue-400 text-4xl font-black mb-2"
+                    >10+</span
+                  >
+                  <span class="text-slate-500 dark:text-slate-400 font-medium"
+                    >Years Experience</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col items-center p-8 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm"
+                >
+                  <span
+                    class="text-primary dark:text-blue-400 text-4xl font-black mb-2"
+                    >100%</span
+                  >
+                  <span class="text-slate-500 dark:text-slate-400 font-medium"
+                    >Satisfaction Rate</span
+                  >
+                </div>
+              </div>
+              <!-- Story & Mission -->
+              <div class="flex flex-col lg:flex-row gap-16 py-12 items-center">
+                <div class="flex flex-1 flex-col gap-6">
+                  <div class="space-y-4">
+                    <h2
+                      class="text-primary dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]"
+                    >
+                      Our Story
+                    </h2>
+                    <p
+                      class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed"
+                    >
+                      Founded over a decade ago, we've grown from a small local
+                      team to a leading corporate cleaning partner. We
+                      recognized a gap in the market for high-standard, reliable
+                      cleaning services that large-scale businesses could trust
+                      implicitly. Today, ProClean Solutions is dedicated to
+                      excellence in every corner of the facilities we serve.
+                    </p>
+                  </div>
+                  <div
+                    class="p-8 bg-primary/5 dark:bg-primary/20 rounded-xl border-l-4 border-primary"
+                  >
+                    <h3
+                      class="text-primary dark:text-blue-400 text-xl font-bold mb-3 flex items-center gap-2"
+                    >
+                      <span class="material-symbols-outlined"
+                        >rocket_launch</span
+                      >
+                      Our Mission
+                    </h3>
+                    <p
+                      class="text-slate-800 dark:text-slate-200 text-lg italic leading-relaxed"
+                    >
+                      "Our mission is to provide reliable, high-quality cleaning
+                      services that help businesses maintain safe and
+                      professional environments."
+                    </p>
+                  </div>
+                </div>
+                <div class="flex-1 w-full">
+                  <div class="rounded-xl overflow-hidden shadow-2xl">
+                    <img
+                      alt="Professional cleaning management team"
+                      class="w-full h-[400px] object-cover"
+                      data-alt="A professional corporate team in a modern office setting"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv_COcVJEMAsYrjZZx-Tvv1u_i4rjsRJe87vq4bNX_folY95-SFCPgZvqDEBBO2DWGcrrjffUDqdaEyfNOv827Gy1r6Cs1pcTATtRIgSt5DUHOfsPBqoHT3ut3wkT7RBGHiTP0T16rbHJNxekeCyVIuBrZFSFtv3WncxrXB6KcSvujmPg_bqoHL0VQ9dhXaqPdCzZyUNqv6RwLt2dUAC-S8CpOQSbvSwOp1hdxE4g-1ZxyeFwcU4YPA0MDtgFPWoIkEJIFtUNMv8d8"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Core Values Section -->
+              <div class="py-16">
+                <div class="text-center mb-12">
+                  <h2
+                    class="text-primary dark:text-white text-3xl font-black mb-4"
+                  >
+                    Our Core Values
+                  </h2>
+                  <p class="text-slate-500 max-w-2xl mx-auto">
+                    The pillars that define our work and our relationships with
+                    every client.
+                  </p>
+                </div>
+                <div
+                  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+                >
+                  <div
+                    class="flex flex-col gap-4 p-6 bg-white dark:bg-slate-900 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+                  >
+                    <div
+                      class="size-12 rounded-lg bg-primary/10 dark:bg-primary/30 flex items-center justify-center text-primary dark:text-blue-400"
+                    >
+                      <span class="material-symbols-outlined"
+                        >verified_user</span
+                      >
+                    </div>
+                    <h4
+                      class="text-lg font-bold text-slate-900 dark:text-white"
+                    >
+                      Integrity
+                    </h4>
+                    <p class="text-slate-500 text-sm">
+                      We operate with honesty and transparency in every contract
+                      and communication.
+                    </p>
+                  </div>
+                  <div
+                    class="flex flex-col gap-4 p-6 bg-white dark:bg-slate-900 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+                  >
+                    <div
+                      class="size-12 rounded-lg bg-primary/10 dark:bg-primary/30 flex items-center justify-center text-primary dark:text-blue-400"
+                    >
+                      <span class="material-symbols-outlined">sync</span>
+                    </div>
+                    <h4
+                      class="text-lg font-bold text-slate-900 dark:text-white"
+                    >
+                      Consistency
+                    </h4>
+                    <p class="text-slate-500 text-sm">
+                      The same high standard, every single visit. We never cut
+                      corners.
+                    </p>
+                  </div>
+                  <div
+                    class="flex flex-col gap-4 p-6 bg-white dark:bg-slate-900 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+                  >
+                    <div
+                      class="size-12 rounded-lg bg-primary/10 dark:bg-primary/30 flex items-center justify-center text-primary dark:text-blue-400"
+                    >
+                      <span class="material-symbols-outlined">badge</span>
+                    </div>
+                    <h4
+                      class="text-lg font-bold text-slate-900 dark:text-white"
+                    >
+                      Professionalism
+                    </h4>
+                    <p class="text-slate-500 text-sm">
+                      Uniformed, trained, and background-checked staff
+                      representing your business well.
+                    </p>
+                  </div>
+                  <div
+                    class="flex flex-col gap-4 p-6 bg-white dark:bg-slate-900 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+                  >
+                    <div
+                      class="size-12 rounded-lg bg-primary/10 dark:bg-primary/30 flex items-center justify-center text-primary dark:text-blue-400"
+                    >
+                      <span class="material-symbols-outlined"
+                        >sentiment_satisfied</span
+                      >
+                    </div>
+                    <h4
+                      class="text-lg font-bold text-slate-900 dark:text-white"
+                    >
+                      Customer Satisfaction
+                    </h4>
+                    <p class="text-slate-500 text-sm">
+                      Our success is measured by the happiness and health of
+                      your workplace.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Professional Team Section -->
+              <div
+                class="py-16 border-t border-slate-200 dark:border-slate-800"
+              >
+                <div
+                  class="flex flex-col md:flex-row justify-between items-end mb-10 gap-4"
+                >
+                  <div class="max-w-2xl">
+                    <h2
+                      class="text-primary dark:text-white text-3xl font-black mb-4"
+                    >
+                      Meet Our Experts
+                    </h2>
+                    <p class="text-slate-500">
+                      Our dedicated team of cleaning specialists and account
+                      managers are here to ensure your facility remains
+                      spotless.
+                    </p>
+                  </div>
+                  <button
+                    class="px-6 py-2 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors"
+                  >
+                    Join Our Team
+                  </button>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                  <div
+                    class="group relative overflow-hidden rounded-xl bg-slate-100"
+                  >
+                    <img
+                      alt="Team Member"
+                      class="w-full aspect-[3/4] object-cover group-hover:scale-105 transition-transform duration-500"
+                      data-alt="Professional smiling woman in corporate attire"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwQoCWK8SYxkmTFBD6rx-7xSayvPZYDh7lQg9zXJkk2V8lYnfv3LWENmHVtv6Lpfy9zvqgRsiQyS_0Ll_nDgH3wHxE_XHxr7S85woXttQrGYJuJcy4X5CnSOO0O-1KpID_olDyKIwWAN2uVmLKz8IdvLLAkG0fSLNEFhdrBCPjLcJW2es8_puyA85nIdtaUn0gxONyJsnLBC0LTUiERXV-F_pIAhGqXRX1Rgrco4stfo08ngkIzcKDha2wYDYVLrZsll5S3Wyjpulq"
+                    />
+                    <div
+                      class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-primary/90 to-transparent"
+                    >
+                      <p class="text-white font-bold">Sarah Jenkins</p>
+                      <p class="text-white/70 text-xs">Operations Director</p>
+                    </div>
+                  </div>
+                  <div
+                    class="group relative overflow-hidden rounded-xl bg-slate-100"
+                  >
+                    <img
+                      alt="Team Member"
+                      class="w-full aspect-[3/4] object-cover group-hover:scale-105 transition-transform duration-500"
+                      data-alt="Professional smiling man in corporate attire"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfPgi1YCOcoPDIMjedJ1xYeMcmhUxukLd8mADIfMmzbrHk9wBmYAR3KGXeW918bbItcJUzDIjSowa0MB8xBq_j_anAGC6TZDv0woJgYITlNXOsDomx8jyc5WK8I_MvZt0G33UuG9_3CnFF__tN4QHKiT7FvRjKHNk4kzanhgUY-TEjYMtslz8qCm5cYRYgoDoNYP8hF9zUbjJkyG386IZVb6YO_klhnU6QKgwqN52-XVbivJoB-UUggpPuKa-BgZ3AjrsoZOpdSirk"
+                    />
+                    <div
+                      class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-primary/90 to-transparent"
+                    >
+                      <p class="text-white font-bold">Marcus Chen</p>
+                      <p class="text-white/70 text-xs">Safety Compliance</p>
+                    </div>
+                  </div>
+                  <div
+                    class="group relative overflow-hidden rounded-xl bg-slate-100"
+                  >
+                    <img
+                      alt="Team Member"
+                      class="w-full aspect-[3/4] object-cover group-hover:scale-105 transition-transform duration-500"
+                      data-alt="Professional woman posing in office environment"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjNZ7A3vLVz_jHaFrn09t4Xtr4GpA7d621pM9CfMIblFj4MQnJtsNhhnNiZxGSfOajesY9lYiV9atIQSNhUNCp_o4J2DKr-69ChuyX2b_kBreeraiWlx6wqgZmz3fspWP94_VapMUl0Fb2pj8O06ekIHczpfRDSCGnlYPVk6tXh-sb8pJRgM0MWAgn5VVMe6bQnK8xujoLzhcD5JKwwxlUtySK1W23Qdo0Q6Oue7xZIWzliTfKHmvwyU8W1Ytu7PBOSJKQqe2D6e5-"
+                    />
+                    <div
+                      class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-primary/90 to-transparent"
+                    >
+                      <p class="text-white font-bold">Elena Rodriguez</p>
+                      <p class="text-white/70 text-xs">Client Relations</p>
+                    </div>
+                  </div>
+                  <div
+                    class="group relative overflow-hidden rounded-xl bg-slate-100"
+                  >
+                    <img
+                      alt="Team Member"
+                      class="w-full aspect-[3/4] object-cover group-hover:scale-105 transition-transform duration-500"
+                      data-alt="Professional man in a suit smiling"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdkJJUhL4Bdr9un72d0qWstaQ-bt0kD_Ivf7cj2av7bHt0BG-i20dUgsR5yMnLo8NfdXpuedNKX_EHAcqvUY_ZQOoujBY6CTrzrEowQGyj_lIZFdppa7svkSL92r_lAR3fIYhN9YeXDlGJD-oLv6AnjrGTzh4YqiiP8CYoESkJkhDv0O8BfCom6bi0n1M4xMiXUeBG78TbKMXK1atmxQi75LkBF0hlKqg3GRNyP7bCv46rLL8eK_4YCkZDd9cMOLJQNK7bm9mimN1_"
+                    />
+                    <div
+                      class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-primary/90 to-transparent"
+                    >
+                      <p class="text-white font-bold">David Thompson</p>
+                      <p class="text-white/70 text-xs">Quality Assurance</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <!-- Footer -->
+    <!-- Footer -->
+    <footer
+      class="bg-slate-900 text-slate-400 pt-20 pb-10 border-t border-white/5"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+          <div class="col-span-1 md:col-span-1">
+            <div class="flex items-center gap-2 mb-6">
+              <div class="bg-primary text-white p-1.5 rounded-lg">
+                <span class="material-symbols-outlined text-2xl"
+                  >cleaning_services</span
+                >
+              </div>
+              <h2 class="text-white text-2xl font-black tracking-tight">
+                CleanPro
+              </h2>
+            </div>
+            <p class="text-sm leading-relaxed mb-8">
+              The leading choice for premium commercial and residential cleaning
+              services since 2008.
+            </p>
+            <div class="flex gap-4">
+              <a
+                class="size-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-sm">public</span>
+              </a>
+              <a
+                class="size-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >alternate_email</span
+                >
+              </a>
+              <a
+                class="size-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-sm">call</span>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-6">Quick Links</h4>
+            <ul class="space-y-4 text-sm">
+              <li>
+                <a
+                  class="hover:text-primary transition-colors"
+                  href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-primary transition-colors"
+                  href="services.html"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-primary transition-colors"
+                  href="about.html"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-primary transition-colors"
+                  href="contact.html"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-6">Company</h4>
+            <ul class="space-y-4 text-sm">
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Our Process</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Sustainability</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-6">Contact Us</h4>
+            <ul class="space-y-4 text-sm">
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary"
+                  >location_on</span
+                >
+                <span>123 Clean Way, Suite 500<br />Metropolis, NY 10001</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary">call</span>
+                <span>(800) 555-0123</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary">mail</span>
+                <span>hello@cleanpro.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+      </div>
+    </div>
+  </body>
+</html>
