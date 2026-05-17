@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+/* Lock dark-mode to class strategy: only activates when .dark is on the root.
+   Since no .dark class is ever set, dark: utilities are permanently inactive
+   and the colour palette stays consistent regardless of OS / DevTools settings. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+
 @font-face {
   font-family: 'Material Symbols Outlined';
   font-style: normal;
@@ -46,6 +53,10 @@
 @layer base {
   body {
     @apply bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100;
+    caret-color: transparent;
+  }
+  input, textarea, [contenteditable="true"] {
+    caret-color: auto;
   }
 }
 
@@ -100,4 +111,16 @@
     width: 100%;
     margin-bottom: 0.5rem;
   }
+
 }
+
+/* Custom override to force 2 columns on mobile/tablet view for hero badges */
+.hero-badges-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+@media screen and (min-width: 768px) {
+  .hero-badges-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+

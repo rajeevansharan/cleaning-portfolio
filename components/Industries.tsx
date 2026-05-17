@@ -23,11 +23,11 @@ const Industries = () => {
   ];
 
   return (
-    <section className="py-24 bg-white dark:bg-background-dark/30" id="industries">
+    <section className="py-14 sm:py-20 lg:py-24 bg-white dark:bg-background-dark/30" id="industries">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-black text-primary dark:text-white mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary dark:text-white mb-4">
               Industries We Serve
             </h2>
             <p className="text-slate-500 dark:text-slate-400">
@@ -38,7 +38,7 @@ const Industries = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {industries.map((industry, index) => (
-            <div key={index} className="relative h-[400px] rounded-2xl overflow-hidden group">
+            <div key={index} className="relative h-[300px] sm:h-[400px] rounded-2xl overflow-hidden group">
               <Image
                 alt={industry.alt}
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"

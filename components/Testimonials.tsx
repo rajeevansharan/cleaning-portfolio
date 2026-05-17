@@ -26,10 +26,10 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-24 bg-white dark:bg-background-dark/50" id="testimonials">
+    <section className="py-14 sm:py-20 lg:py-24 bg-white dark:bg-background-dark/50" id="testimonials">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-black text-primary dark:text-white">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary dark:text-white">
             What Our Clients Say
           </h2>
         </div>

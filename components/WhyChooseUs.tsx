@@ -25,9 +25,9 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-20 bg-white dark:bg-background-dark/50">
+    <section className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-background-dark/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {features.map((feature, index) => (
             <div key={index} className="flex flex-col items-center text-center p-6 rounded-xl hover:bg-primary/5 transition-colors">
               <div className="size-16 bg-primary text-white rounded-2xl flex items-center justify-center mb-6">

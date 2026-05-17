@@ -37,15 +37,15 @@ const ServicesOverview = () => {
   ];
 
   return (
-    <section className="py-24 bg-background-light dark:bg-background-dark" id="services">
+    <section className="py-14 sm:py-20 lg:py-24 bg-background-light dark:bg-background-dark" id="services">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-black text-primary dark:text-white mb-4">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary dark:text-white mb-4">
             Our Premium Services
           </h2>
           <div className="h-1.5 w-24 bg-primary mx-auto rounded-full"></div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
