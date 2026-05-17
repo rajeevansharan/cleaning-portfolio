@@ -69,7 +69,7 @@ const ServicesOverview = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary dark:text-white mb-4">
            Our Premium Services
           </h2>
-          <div className="h-1.5 w-24 bg-primary mx-auto rounded-full"></div>
+          <div className="h-1.5 w-24 bg-primary mx-auto rounded-full mb-8"></div>
         </motion.div>
 
         {/* Cards Grid */}

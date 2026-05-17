@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import heroImage from '../public/assets/images/hero.png';
+import heroImage from '../public/assets/Images/hero.png';
 import desktopHeroImage from '../public/assets/Images/desktopHero.png';
 
 const staggerContainer = {

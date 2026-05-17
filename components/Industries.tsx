@@ -25,19 +25,19 @@ const Industries = () => {
     {
       title: 'Corporate Offices',
       description: 'Executive workspaces and coworking hubs.',
-      image: '/assets/images/corporate office.png',
+      image: '/assets/Images/corporate office.png',
       alt: 'Modern corporate office lobby'
     },
     {
       title: 'Auto Dealerships',
       description: 'Pristine showrooms and service bays.',
-      image: '/assets/images/Auto Dealerships.png',
+      image: '/assets/Images/Auto Dealerships.png',
       alt: 'Luxury car showroom'
     },
     {
       title: 'Property Management',
       description: 'Multi-unit complexes and commercial properties.',
-      image: '/assets/images/Property Management.png',
+      image: '/assets/Images/Property Management.png',
       alt: 'Luxury apartment complex exterior'
     }
   ];
