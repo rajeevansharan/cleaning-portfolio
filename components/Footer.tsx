@@ -47,8 +47,6 @@ const Footer = () => {
               <li><a href="#" className="hover:text-white transition-colors">Our Process</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Sustainability</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
             </ul>
           </div>
 
@@ -57,19 +55,28 @@ const Footer = () => {
             <h4 className="text-white font-bold mb-5 sm:mb-6">Contact Us</h4>
             <ul className="space-y-3 sm:space-y-4 text-sm">
               <li className="flex items-center gap-3">
-                <span className="material-symbols-outlined text-primary flex-shrink-0">call</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5 text-blue-400 flex-shrink-0">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.387a12.035 12.035 0 0 1-7.108-7.108c-.155-.44.011-.927.387-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                </svg>
                 <span>647 466 6658</span>
               </li>
               <li className="flex items-center gap-3">
-                <span className="material-symbols-outlined text-primary flex-shrink-0">public</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5 text-blue-400 flex-shrink-0">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a15 15 0 0 0 3-9 15 15 0 0 0-3-9m0 18a15 15 0 0 1-3-9 15 15 0 0 1 3-9M3 12h18" />
+                </svg>
                 <span>pksservices.ca</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-primary flex-shrink-0">mail</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5 text-blue-400 flex-shrink-0 mt-0.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                </svg>
                 <span className="break-all">pksservicesinc@gmail.com</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-primary flex-shrink-0">location_on</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5 text-blue-400 flex-shrink-0 mt-0.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                </svg>
                 <span>Markham, Ontario</span>
               </li>
             </ul>

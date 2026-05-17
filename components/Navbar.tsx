@@ -52,7 +52,7 @@ const Navbar = () => {
               href="/contact"
               className="bg-primary text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg text-sm font-bold tracking-wide hover:opacity-90 transition-all"
             >
-              Get Free Quote
+              Get Quote
             </Link>
             {/* Hamburger — mobile only */}
             <button

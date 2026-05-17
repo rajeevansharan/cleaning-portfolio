@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import heroImage from '../public/assets/images/hero.png';
 
 const Hero = () => {
@@ -24,12 +25,12 @@ const Hero = () => {
             Delivering reliable, high-quality cleaning solutions for offices, industrial facilities, and residential properties.
           </p>
           <div className="flex flex-wrap gap-3 sm:gap-4 mb-8 sm:mb-12">
-            <button className="bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base font-bold hover:scale-105 transition-transform">
-              Get Free Quote
-            </button>
-            <button className="bg-white/20 backdrop-blur-md border border-white/30 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base font-bold hover:bg-white/30 transition-all">
+            <Link href="/contact" className="bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base font-bold hover:scale-105 transition-transform flex items-center justify-center">
+              Get Quote
+            </Link>
+            <Link href="/services" className="bg-white/20 backdrop-blur-md border border-white/30 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base font-bold hover:bg-white/30 transition-all flex items-center justify-center">
               Our Services
-            </button>
+            </Link>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 hero-badges-grid">

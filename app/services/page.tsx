@@ -104,7 +104,7 @@ const ServicesPage = () => {
       <div className="flex-1">
 
         {/* Page Hero */}
-        <section className="relative h-[280px] sm:h-[360px] md:h-[400px] w-full flex items-center justify-center overflow-hidden">
+        <section className="relative h-[calc(100vh-4rem)] md:h-[calc(100vh-5rem)] w-full flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 bg-slate-900/60 z-10" />
           <Image
             src="/assets/Images/corporate office.png"
