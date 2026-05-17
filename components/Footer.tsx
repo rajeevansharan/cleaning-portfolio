@@ -4,14 +4,13 @@ import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-900 text-slate-400 pt-12 sm:pt-16 lg:pt-20 pb-8 sm:pb-10 border-t border-white/5 mt-auto">
+    <footer className="bg-slate-900 text-slate-400 pt-10 sm:pt-10 pb-8  border-t border-white/5 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-10 sm:mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12">
           {/* Brand column */}
           <div className="col-span-1 sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 mb-5">
               <Image src="/assets/Images/logo.png" alt="PKS Logo" width={100} height={100} className="object-contain w-12 h-12 lg:w-[100px] lg:h-[100px]" />
-              <h2 className="text-white text-2xl font-black tracking-tight">PKS</h2>
             </div>
             <p className="text-sm leading-relaxed mb-6 sm:mb-8">
               The leading choice for premium commercial and residential cleaning services since 2008.
@@ -30,7 +29,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="lg:pt-6">
             <h4 className="text-white font-bold mb-5 sm:mb-6">Quick Links</h4>
             <ul className="space-y-3 sm:space-y-4 text-sm">
               <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
@@ -41,7 +40,7 @@ const Footer = () => {
           </div>
 
           {/* Company */}
-          <div>
+          <div className="lg:pt-6">
             <h4 className="text-white font-bold mb-5 sm:mb-6">Company</h4>
             <ul className="space-y-3 sm:space-y-4 text-sm">
               <li><a href="#" className="hover:text-white transition-colors">Our Process</a></li>
@@ -51,7 +50,7 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="lg:pt-6">
             <h4 className="text-white font-bold mb-5 sm:mb-6">Contact Us</h4>
             <ul className="space-y-3 sm:space-y-4 text-sm">
               <li className="flex items-center gap-3">
@@ -84,7 +83,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 sm:pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+        <div className="pt-4 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
           <p>© {new Date().getFullYear()} PKS Services Inc. All rights reserved.</p>
           <div className="flex gap-4 sm:gap-6">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>

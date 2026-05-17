@@ -43,7 +43,7 @@ const Industries = () => {
   ];
 
   return (
-    <section className="py-14 sm:py-20 lg:py-24 bg-white dark:bg-background-dark/30 overflow-hidden" id="industries">
+    <section className="py-14 sm:py-20 bg-white dark:bg-background-dark/30 overflow-hidden" id="industries">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Block */}
         <motion.div 
@@ -52,9 +52,9 @@ const Industries = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4"
+          className="text-center mb-16"
         >
-          <div className="max-w-2xl">
+          <div className="max-w-2xl mx-auto">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary dark:text-white mb-4">
               Industries We Serve
             </h2>

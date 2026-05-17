@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -13,10 +14,11 @@ const navLinks = [
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
   const close = () => setIsMenuOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-primary/10">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-primary/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
@@ -28,22 +30,26 @@ const Navbar = () => {
               height={100}
               className="object-contain w-12 h-12 md:w-[100px] md:h-[100px]"
             />
-            <h2 className="text-primary dark:text-white text-xl md:text-2xl font-black tracking-tight">
-              PKS
-            </h2>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                className="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white font-medium text-sm transition-colors"
-              >
-                {label}
-              </Link>
-            ))}
+          <nav className="hidden md:flex items-center gap-8 h-full">
+            {navLinks.map(({ href, label }) => {
+              const isActive = pathname === href;
+              return (
+                <Link
+                  key={href}
+                  href={href}
+                  className={`font-semibold text-sm transition-colors py-2 border-b-2 ${
+                    isActive
+                      ? 'text-primary dark:text-blue-400 font-bold border-primary dark:border-blue-400'
+                      : 'text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white border-transparent'
+                  }`}
+                >
+                  {label}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Right Controls */}
@@ -75,17 +81,24 @@ const Navbar = () => {
           isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         } bg-white dark:bg-background-dark border-b border-primary/10`}
       >
-        <nav className="flex flex-col px-6 py-4 gap-1">
-          {navLinks.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              onClick={close}
-              className="py-3 text-slate-700 dark:text-slate-200 font-semibold text-base border-b border-slate-100 dark:border-slate-800 last:border-0 hover:text-primary transition-colors"
-            >
-              {label}
-            </Link>
-          ))}
+        <nav className="flex flex-col px-6 py-4 gap-2">
+          {navLinks.map(({ href, label }) => {
+            const isActive = pathname === href;
+            return (
+              <Link
+                key={href}
+                href={href}
+                onClick={close}
+                className={`py-3 px-4 font-semibold text-base rounded-lg border-l-4 transition-all duration-250 ${
+                  isActive
+                    ? 'bg-primary/5 dark:bg-primary/20 text-primary dark:text-blue-400 border-primary dark:border-blue-400'
+                    : 'text-slate-700 dark:text-slate-200 border-transparent hover:text-primary'
+                }`}
+              >
+                {label}
+              </Link>
+            );
+          })}
         </nav>
       </div>
     </header>

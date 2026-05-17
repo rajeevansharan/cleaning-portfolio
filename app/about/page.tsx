@@ -22,6 +22,22 @@ const fadeInUp = {
   },
 };
 
+const fadeInLeft = {
+  hidden: { opacity: 0, x: -60 },
+  visible: {
+    opacity: 1,
+    x: 0,
+  },
+};
+
+const fadeInRight = {
+  hidden: { opacity: 0, x: 60 },
+  visible: {
+    opacity: 1,
+    x: 0,
+  },
+};
+
 const AboutPage = () => {
   const stats = [
     { value: '500+', label: 'Active Clients' },
@@ -117,12 +133,14 @@ const AboutPage = () => {
               >
                 <motion.h1 
                   variants={fadeInUp}
+                  transition={{ duration: 0.75, ease: 'easeOut' }}
                   className="text-white text-2xl sm:text-4xl md:text-5xl font-black leading-tight tracking-tight"
                 >
                   About PKS Services INC
                 </motion.h1>
                 <motion.p 
                   variants={fadeInUp}
+                  transition={{ duration: 0.65, ease: 'easeOut' }}
                   className="text-white/80 text-base sm:text-lg max-w-xl mt-2"
                 >
                   Setting the standard in professional facility maintenance for over a decade.
@@ -163,7 +181,7 @@ const AboutPage = () => {
                 viewport={{ once: true, amount: 0.15 }}
                 variants={staggerContainer}
               >
-                <motion.div variants={fadeInUp} transition={{ duration: 0.5 }} className="space-y-4">
+                <motion.div variants={fadeInLeft} transition={{ duration: 0.5 }} className="space-y-4">
                   <h2 className="text-primary dark:text-white text-2xl sm:text-4xl font-black leading-tight tracking-tight">
                     Our Story
                   </h2>
@@ -175,7 +193,7 @@ const AboutPage = () => {
                     facilities we serve.
                   </p>
                 </motion.div>
-                <motion.div variants={fadeInUp} transition={{ duration: 0.5 }} className="p-6 sm:p-8 bg-primary/5 dark:bg-primary/20 rounded-xl border-l-4 border-primary shadow-sm">
+                <motion.div variants={fadeInLeft} transition={{ duration: 0.5 }} className="p-6 sm:p-8 bg-primary/5 dark:bg-primary/20 rounded-xl border-l-4 border-primary shadow-sm">
                   <h3 className="text-primary dark:text-blue-400 text-lg sm:text-xl font-bold mb-3 flex items-center gap-2">
                     <span className="material-symbols-outlined">rocket_launch</span>
                     Our Mission
@@ -192,7 +210,7 @@ const AboutPage = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.15 }}
-                variants={fadeInUp}
+                variants={fadeInRight}
                 transition={{ duration: 0.6 }}
               >
                 <div className="rounded-xl overflow-hidden shadow-2xl relative w-full h-[260px] sm:h-[400px]">

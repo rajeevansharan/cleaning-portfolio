@@ -55,7 +55,7 @@ const ServicesOverview = () => {
   ];
 
   return (
-    <section className="py-14 sm:py-20 lg:py-24 bg-background-light dark:bg-background-dark overflow-hidden" id="services">
+    <section className="py-8 sm:py-10 bg-background-light dark:bg-background-dark overflow-hidden" id="services">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div 
@@ -64,10 +64,10 @@ const ServicesOverview = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-10 sm:mb-16"
+          className="text-center mb-10 sm:mb-1"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary dark:text-white mb-4">
-            Our Premium Services
+           Our Premium Services
           </h2>
           <div className="h-1.5 w-24 bg-primary mx-auto rounded-full"></div>
         </motion.div>

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import heroImage from '../public/assets/images/hero.png';
+import desktopHeroImage from '../public/assets/Images/desktopHero.png';
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -24,7 +25,7 @@ const fadeInUp = {
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[500px] sm:min-h-[600px] lg:min-h-[800px] flex items-center overflow-hidden">
+    <section className="relative min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-5rem)] flex items-center overflow-hidden">
       {/* Background Image and Overlay */}
       <div className="absolute inset-0 z-0">
         <motion.div 
@@ -34,24 +35,32 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
         />
         <motion.div
-          className="w-full h-full"
+          className="w-full h-full relative"
           initial={{ scale: 1.1, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.2, ease: 'easeOut' }}
         >
+          {/* Mobile Background Image */}
           <Image
-            alt="Professional Cleaning"
-            className="w-full h-full object-cover object-right sm:object-top"
+            alt="Professional Cleaning Mobile"
+            className="block md:hidden object-cover object-right"
             src={heroImage}
-            width={1920}
-            height={1080}
+            fill
+            priority
+          />
+          {/* Desktop & Tablet Background Image */}
+          <Image
+            alt="Professional Cleaning Desktop"
+            className="hidden md:block object-cover object-right"
+            src={desktopHeroImage}
+            fill
             priority
           />
         </motion.div>
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+      <div className="relative z-20 max-w-7xl ml-0 mr-auto px-4 sm:px-10 lg:pl-16 lg:pr-8 py-12 sm:py-16 lg:py-20">
         <motion.div 
           className="max-w-3xl"
           variants={staggerContainer}

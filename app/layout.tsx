@@ -25,7 +25,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block"
         />
       </head>
-      <body className="font-display">
+      <body className="font-display pt-16 md:pt-20">
         {children}
       </body>
     </html>

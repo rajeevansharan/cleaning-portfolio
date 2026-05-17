@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
-/* Lock dark-mode to class strategy: only activates when .dark is on the root.
-   Since no .dark class is ever set, dark: utilities are permanently inactive
+/* Lock dark-mode to class strategy: only activates when .dark-mode-active is on the root.
+   Since no .dark-mode-active class is ever set, dark: utilities are permanently inactive
    and the colour palette stays consistent regardless of OS / DevTools settings. */
-@custom-variant dark (&:where(.dark, .dark *));
+@variant dark (.dark-mode-active &);
 
 
 
